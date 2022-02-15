@@ -8,6 +8,7 @@ healthcare_management_system
 
 # Author(s)
 Author 1: Amulya Boyapati
+
 Author 2: ALLURI MANOJ KUMAR
 
 # Database description
