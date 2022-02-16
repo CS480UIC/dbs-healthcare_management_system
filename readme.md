@@ -11,5 +11,7 @@ Author 1: Amulya Boyapati
 
 Author 2: ALLURI MANOJ KUMAR
 
+Author 3: Sumanth Donepudi
+
 # Database description
 
