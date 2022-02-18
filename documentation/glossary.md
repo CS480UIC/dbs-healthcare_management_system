@@ -1,23 +1,23 @@
 ## 1)Per each entity, document name, synonyms, and description in the glossary 
 
-Entity Name: doctor
+**Entity Name**: doctor
 
-Synonyms: Medical practitioner, Clinician, Medic, Surgeon
+**Synonyms**: Medical practitioner, Clinician, Medic, Surgeon
 
-Description: A doctor is a health professional who practices medicine, and treats patients who are ill or injured or in need of treatment. 
+**Description**: A doctor is a health professional who practices medicine, and treats patients who are ill or injured or in need of treatment. 
 
 
-Entity Name: medical_history 
+**Entity Name**: medical_history 
 
-Synonyms: Medical record, Health history
+**Synonyms**: Medical record, Health history
 
-Description: The medical history of a patient is information gained by a doctor by asking the patient a few specific questions to formulate the required diagnosis and provide the right medical care to the patient. 
+**Description**: The medical history of a patient is information gained by a doctor by asking the patient a few specific questions to formulate the required diagnosis and provide the right medical care to the patient. 
 
-Entity Name: payment
+**Entity Name**: payment
 
-Synonyms: Fee, Charges
+**Synonyms**: Fee, Charges
 
-Description: A payment is the fee charged by the hospital from the patient for treating the patient and providing the patient with health care services. 
+**Description**: A payment is the fee charged by the hospital from the patient for treating the patient and providing the patient with health care services. 
 
 
 ## 2) Per each relationship, determine relationship maxima and minima and document it in the glossary
