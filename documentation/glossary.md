@@ -1,4 +1,4 @@
-1)Per each entity, document name, synonyms, and description in the glossary 
+## 1)Per each entity, document name, synonyms, and description in the glossary 
 
 Entity Name: doctor
 
@@ -20,8 +20,7 @@ Synonyms: Fee, Charges
 Description: A payment is the fee charged by the hospital from the patient for treating the patient and providing the patient with health care services. 
 
 
-
-2) Per each relationship, determine relationship maxima and minima and document it in the glossary
+## 2) Per each relationship, determine relationship maxima and minima and document it in the glossary
 
 patient 1(1) contains patient_medical_history 1(1)
 
@@ -30,9 +29,9 @@ patient 1(1) makes payment M(1)
 patient 1(1) makes payment M(1)
 
 
-3)Per each attribute, determine attribute maxima and minima and document it in the glossary 
+## 3)Per each attribute, determine attribute maxima and minima and document it in the glossary 
 
-doctor Attributes
+### doctor Attributes <br/><br/>
 
 doctor_id: 1-1(1)
 
@@ -52,7 +51,7 @@ address: M-1(1)
 
 hosipital_id: M-1(1)
 
-patient_medical_history Attributes
+### patient_medical_history Attributes <br/><br/>
 
 history_id: 1-1(1)
 
@@ -66,7 +65,7 @@ last_visit: 1-1(1)
 
 patient_id: 1-1(1)
 
-payment Attributes
+### payment Attributes <br/><br/>
 
 payment_id: 1-1(1)
 
