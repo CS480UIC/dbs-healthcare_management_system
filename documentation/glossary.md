@@ -30,6 +30,19 @@
 
 **Description**: A payment is the fee charged by the hospital from the patient for treating the patient and providing the patient with health care services. <br/><br/>
 
+**Entity Name**: hospital
+
+**Synonyms**: Health Center, Clinic
+
+**Description**: A hospital is an institution, where patients get admitted to and receive the right healthcare services from the doctors. <br/><br/>
+
+**Entity Name**: insurance
+
+**Synonyms**: Health plan, Medicare
+
+**Description**: Health insurance is a contract that requires an insurer to pay some or all of a patient's healthcare costs in exchange for a monthly/yearly plan chosen by the patient. <br/><br/>
+
+
 
 ## 2) Per each relationship, determine relationship maxima and minima and document it in the glossary
 
@@ -41,7 +54,13 @@ patient 1(1) contains patient_medical_history 1(1)
 
 patient 1(1) makes payment M(1)
 
-patient M(0) visits hospital 1(1)<br/><br/>
+patient M(0) visits hospital 1(1)
+
+patient 1(1) takes medication M(0)
+
+doctor 1(1) recommends medication M(0)
+
+patient 1(1) opts insurance M(0)<br/><br/>
 
 
 ## 3)Per each attribute, determine attribute maxima and minima and document it in the glossary 
@@ -141,3 +160,36 @@ doc_referred: M-1(1)
 date: M-1(1)
 
 patient_id: M-1(1)<br/><br/>
+
+### hospital Attributes<br/><br/>
+
+hosipital_id: 1-1(1)
+
+name : M-1(1)
+
+contact_no: 1-M(1)
+
+email: 1-M(1)
+
+address: 1-1(1)
+
+employee_count: 1-1(1)
+
+mfg_company: M-M(1)
+
+doctor_id: M-1(1)
+
+patient_id: M-1(1)<br/><br/>
+
+### insurance Attributes<br/><br/>
+insurance_id: 1-1(1)
+
+insurance_company: M-M(0)
+
+start_date: M-1(0)
+
+end_date: M-1(0)
+
+insurance_plan: M-1(0)
+
+patient_id: 1-1(1)
