@@ -26,7 +26,7 @@ patient 1(1) contains patient_medical_history 1(1)
 
 patient 1(1) makes payment M(1)
 
-patient 1(1) makes payment M(1)
+patient M(0) visits hospital 1(1)
 
 
 ## 3)Per each attribute, determine attribute maxima and minima and document it in the glossary 
