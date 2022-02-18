@@ -1,4 +1,4 @@
-## 1)Per each entity, document name, synonyms, and description in the glossary 
+## 1)Per each entity, document name, synonyms, and description in the glossary <br/><br/>
 
 **Entity Name**: doctor
 
