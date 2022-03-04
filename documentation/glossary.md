@@ -173,13 +173,7 @@ email: 1-M(1)
 
 address: 1-1(1)
 
-employee_count: 1-1(1)
-
-mfg_company: M-M(1)
-
-doctor_id: M-1(1)
-
-patient_id: M-1(1)<br/><br/>
+employee_count: 1-1(1)<br/><br/>
 
 ### insurance Attributes<br/><br/>
 insurance_id: 1-1(1)
@@ -199,22 +193,36 @@ patient_id: 1-1(1)
 
 Dependent Entities: patient,payment, doctor, patient_medical_history, medication
 
-Dependency relationship: 1)patient makes payment
+Dependency relationship: 
+
+1)patient makes payment
 
 2)patient opts insurance
 
 3)patient contains patient_medical_history 
 
+4)patient takes medication
+
+5)doctor recommends medication
+
 
 ### Document supertypes, subtypes, and partitions
 
 Supertype and subtype relationship
+
 patient is a supertype of patient_medical_history entity
+
+patient is a supertype of payment entity
+
+partitions: there are no partitions
 
 
 ### Specify cascade and restrict actions for dependency relationships
 
 patient on delete patient_medical_history cascade
+
+patient on delete payment cascade
+
 
 
 ### Specify cascade and restrict rules on foreign keys that implement dependency relationships
@@ -223,6 +231,13 @@ patient_id(FK) in payment table ->patient_id(PK) in patient table on delete casc
 
 
 patient_id(FK) in Insurance table ->patient_id(PK) in patient table on delete cascade.
+
+
+doctor_id(FK) in medication table -> doctor_id(PK) in doctor table on delete SET NULL
+
+
+patient_id(FK) in medical_history table ->patient_id(PK) in patient table on delete SET NULL.
+
 
 
 ### Implementing attribute type:
@@ -309,6 +324,84 @@ date: DATE NOT NULL Description: Date specifies the date when the patient consul
 
 
 patient_id: INTEGER NOT NULL Description: Foreign key which connects to the patient entity.
+
+
+#### patient Attributes
+
+
+patient_id: Type: INTEGER NOT NULL Description: Uniquely stores the patients records in a table 
+
+
+first_name : Type: VARCHAR(20) NOT NULL Description: First name specifies the string for the first name of the patient.
+
+
+last_name: Type: VARCHAR(20) NOT NULL Description: The last name specifies the string for the first name of the patient.
+
+
+contact_no: LONG Description: Stores the phone number of the patient
+
+
+email: Type: VARCHAR(20) NOT NULL Description: email specifies the string for the email of the user.
+
+
+gender: Type: VARCHAR(20) NOT NULL Description: Stores the gender of the patient
+
+
+age: Type: Integer NOT NULL Description: Stores the age of the patient
+
+
+address: Type: VARCHAR(20) NOT NULL Description: specifies the address for the patient
+
+
+user_name: Type: VARCHAR(20) NOT NULL Description: Stores the username of the patient
+
+
+password: Type: VARCHAR(20) NOT NULL Description: Stores the password of the patient
+
+
+hosipital_id: Type: INTEGER NOT NULL Description: Foreign key which connects to the hospital entity.
+
+
+doctor_id: Type: INTEGER NOT NULL Description: Foreign key which connects to the doctor entity.
+
+
+#### patient_medical_history Attributes 
+
+
+history_id: INTEGER NOT NULL Description: medicine_id specifies the the particular id for the patient's medical history
+
+
+conditions: VARCHAR(50) NOT NULL Description: Stores the data of patients medical conditions.
+
+
+last_visit: DATE Description: Last visit indicates the last time the patient visited the hospital.
+
+
+patient_id: INTEGER NOT NULL Description: Foreign key which connects to the patient entity.
+
+
+#### patient_medical_history_medication Attributes
+
+
+history_id: INTEGER NOT NULL Description: medicine_id specifies the the particular id for the patient's medical history
+
+
+medication:VARCHAR(20) NOT NULL Description: Stores the medication data of the patient.
+
+
+
+#### patient_doctor attributes
+
+
+patient_id: Type: INTEGER NOT NULL Description: Uniquely stores the patients records in a table 
+
+
+doctor_id: Type: INTEGER NOT NULLDescription: Uniquely stores the doctor records in a table
+
+
+
+
+
 
 
 
