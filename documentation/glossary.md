@@ -188,8 +188,8 @@ insurance_plan: M-1(0)
 
 patient_id: 1-1(1)
 
-
-### Document dependent entities and dependency relationships
+# PD-5
+### 1) Document dependent entities and dependency relationships
 
 Dependent Entities: patient,payment, doctor, patient_medical_history, medication
 
@@ -205,8 +205,14 @@ Dependency relationship:
 
 5)doctor recommends medication
 
+6)patient visits hospital
 
-### Document supertypes, subtypes, and partitions
+7)doctor worksAt hospital
+
+8)patient consults doctor
+
+
+### 2) Document supertypes, subtypes, and partitions
 
 Supertype and subtype relationship
 
@@ -217,15 +223,16 @@ patient is a supertype of payment entity
 partitions: there are no partitions
 
 
-### Specify cascade and restrict actions for dependency relationships
+### 3) Specify cascade and restrict actions for dependency relationships
 
 patient on delete patient_medical_history cascade
 
 patient on delete payment cascade
 
+patient on delete insurance
 
 
-### Specify cascade and restrict rules on foreign keys that implement dependency relationships
+### 4) Specify cascade and restrict rules on foreign keys that implement dependency relationships
 
 patient_id(FK) in payment table ->patient_id(PK) in patient table on delete cascade.
 
@@ -239,10 +246,19 @@ doctor_id(FK) in medication table -> doctor_id(PK) in doctor table on delete SET
 patient_id(FK) in medical_history table ->patient_id(PK) in patient table on delete SET NULL.
 
 
+hosipital_id(FK) in patient table->hosipital_id(PK) in hospital table on delete SET NULL
 
-### Implementing attribute type:
 
-#### 1) Doctor Entity Attributes 
+doctor_id(FK) in patient table->doctor_id(PK) in doctor table on delete SET NULL
+
+
+hosipital_id(FK) in doctor table->hosipital_id(PK) in hospital table on delete SET NULL
+
+
+
+### 5) Implementing attribute type:
+
+#### Doctor Entity Attributes 
 
 
 doctor_id: Type: INTEGER NOT NULLDescription: Uniquely stores the doctor records in a table
@@ -397,6 +413,59 @@ patient_id: Type: INTEGER NOT NULL Description: Uniquely stores the patients rec
 
 
 doctor_id: Type: INTEGER NOT NULLDescription: Uniquely stores the doctor records in a table
+
+
+#### hospital attributes
+
+hosipital_id: Type: INTEGER NOT NULL Description: hosipital_id specifies the the particular id for that hospital
+
+
+name :  VARCHAR(20) NOT NULL Description: Name specifies the string for the Hospital name.
+
+
+contact_no: LONG Description: Stores the phone number of the hospital
+
+
+email: VARCHAR(20) NOT NULL Description: email specifies the string for the email of the Hospital.
+
+
+address: VARCHAR(100) NOT NULL Description: address specifies the string for the address of the hospital.
+
+
+employee_count: INTEGER NOT NULL Description: Employee count specifies the the particular id for no of employees in the hospital.
+
+
+#### insurance attributes
+
+insurance_id: Type: INTEGER NOT NULL Description: insurance_id specifies the the particular id for that insurance.
+
+
+insurance_company: Type: VARCHAR(20) NOT NULL Description: Stores the insurance company name.
+
+
+start_date: DATE NOT NULL Description: Stores the start date of the insurance.
+
+
+end_date: DATE NOT NULL Description: Stores the end date of the insurance.
+
+
+insurance_plan: VARCHAR(20) NOT NULL Description: Stores the type of insurance plan.
+
+
+patient_id: Type: INTEGER NOT NULL Description: Foreign key which connects to the patient entity.
+
+#### patient_medical_history_surgeries attributes
+
+history_id: INTEGER NOT NULL Description: medicine_id specifies the the particular id for the patient's medical history.
+
+
+surgeries:VARCHAR(20) NOT NULL Description: Stores the data of the previous surgeries the patient had.
+
+
+### 6) Describe at least one plural attribute and describe how did you implement it
+
+We handled two plural attributes: medication and surgeries from patient_medical_history table. Medication attribute indicates all of the medication that was recommended by the doctor at the previous visit. The Surgeries attribute indicates all the previous surgeries of the patient. We created separate tables for medication with a primary key of the new table as a combination of primary keys of both the tables. Similarly for surgeries, we created a new table with a primary key as a combination  of the primary keys of both the tables.
+
 
 
 
