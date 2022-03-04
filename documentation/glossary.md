@@ -193,3 +193,125 @@ end_date: M-1(0)
 insurance_plan: M-1(0)
 
 patient_id: 1-1(1)
+
+
+### Document dependent entities and dependency relationships
+
+Dependent Entities: patient,payment, doctor, patient_medical_history, medication
+
+Dependency relationship: 1)patient makes payment
+
+2)patient opts insurance
+
+3)patient contains patient_medical_history 
+
+
+### Document supertypes, subtypes, and partitions
+
+Supertype and subtype relationship
+patient is a supertype of patient_medical_history entity
+
+
+### Specify cascade and restrict actions for dependency relationships
+
+patient on delete patient_medical_history cascade
+
+
+### Specify cascade and restrict rules on foreign keys that implement dependency relationships
+
+patient_id(FK) in payment table ->patient_id(PK) in patient table on delete cascade.
+
+
+patient_id(FK) in Insurance table ->patient_id(PK) in patient table on delete cascade.
+
+
+### Implementing attribute type:
+
+#### 1) Doctor Entity Attributes 
+
+
+doctor_id: Type: INTEGER NOT NULLDescription: Uniquely stores the doctor records in a table
+
+
+first_name Type: VARCHAR(20) NOT NULL Description: First name specifies the string for the first name of the user.
+
+
+last_name: Type: VARCHAR(20) NOT NULL Description: The last name specifies the string for the first name of the user.
+
+
+contact_no: LONG NOT NULL Description: Stores the phone number of the doctor
+
+
+email: Type: VARCHAR(20) NOT NULL Description: email specifies the string for the email of the user.
+
+
+experience: Type: INTEGER NOT NULL Description: Stores the experience of the doctor
+
+
+department: Type: VARCHAR(20) NOT NULL Description: Stores the department of the doctor belonging to.
+
+
+address: Type: VARCHAR(20) NOT NULL Description: specifies the address for the doctor 
+
+
+hosipital_id: Type: INTEGER NOT NULL Description: Foreign key which connects to the hospital entity.
+
+
+#### medication Attribute
+
+
+medication_id: Type: INTEGER NOT NULL Description: medicine_id specifies the the particular id for that medicine
+
+
+medicine_name: Type: VARCHAR(100) NOT NULL Description: Specifies the name of the medicine
+
+
+price: Type: INTEGER Description:Specifies the price of the medicine
+
+
+mfg_date: Type: DATE NOT NULL Description: Stores the manufacturing date of the medicine.
+
+
+exp_date: Type: DATE NOT NULL Description: Stores the expiring date of the medicine.
+
+
+mfg_company: Type: VARCHAR(100) NOT NULL Description: Stores the company name of the medicine.
+
+
+doctor_id: Type: INTEGER NOT NULL Description: Foreign key which connects to the doctor entity.
+
+
+patient_id: Type: INTEGER NOT NULL Description: Foreign key which connects to the patient entity.
+
+
+#### payment Attributes 
+
+
+payment_id: Type: INTEGER NOT NULL Description: payment_id specifies the the particular id for that transaction
+
+
+first_name : VARCHAR(20) NOT NULL Description: First name specifies the string for the first name of the patient.
+
+
+last_name: VARCHAR(20) NOT NULL Description: Last name specifies the string for the last name of the patient.
+
+
+type_of_payment : VARCHAR(20) NOT NULL Description: Type of payment specifies the string for the payment type the patient opted for.
+
+
+treatment: VARCHAR(20) NOT NULL Description: Treatment specifies the string for the treatment the patient undertook.
+
+
+doc_referred: VARCHAR(20) NOT NULL Description: Doc_referred specifies the string for the doctor which the patient consulted.
+
+
+date: DATE NOT NULL Description: Date specifies the date when the patient consulted the doctor.
+
+
+patient_id: INTEGER NOT NULL Description: Foreign key which connects to the patient entity.
+
+
+
+
+
+
