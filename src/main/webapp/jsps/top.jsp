@@ -43,8 +43,9 @@
 			Hello：${sessionScope.session_user.username };
 			<a href="<c:url value='/jsps/user/queries.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
-			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD entity 1</a> |&nbsp;&nbsp;
-
+			<a href="<c:url value='/jsps/doctor_entity/menu.jsp'/>" target="body">Doctor Entity </a> |&nbsp;&nbsp;
+            <a href="<c:url value='/jsps/payment_entity/menu.jsp'/>" target="body">Payment Entity </a> |&nbsp;&nbsp;
+		    <a href="<c:url value='/jsps/medication_entity/menu.jsp'/>" target="body">Medication Entity </a> |&nbsp;&nbsp;
 		</c:otherwise>
 	</c:choose>
 
