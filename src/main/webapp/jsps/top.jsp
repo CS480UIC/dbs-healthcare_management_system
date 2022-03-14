@@ -31,7 +31,7 @@
   </head>
   
   <body>
-<h1 style="text-align: center;">ALLURI MANOJ KUMAR</h1>
+<h1 style="text-align: center;">HEALTH CARE MANAGEMENT SYSTEM</h1>
 <div style="font-size: 10pt;">
 	<c:choose>
 		<c:when test="${empty sessionScope.session_user }">
