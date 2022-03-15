@@ -22,12 +22,12 @@
   </head>
   
   <body>
-    <h1>CRUD operations for Doctor Entity </h1>
+    <h1>CRUD operations for Patient Surgeries Entity </h1>
     <br>
-	<a href="<c:url value='/jsps/doctor_entity/doctorcreate.jsp'/>" target="_parent">Create Doctor Entity</a> |&nbsp; 
-	<a href="<c:url value='/jsps/doctor_entity/doctorread.jsp'/>" target="_parent">Read Doctor Entity</a> |&nbsp;
-	<a href="<c:url value='/jsps/doctor_entity/doctorupdate.jsp'/>" target="_parent">Update Doctor Entity</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/doctor_entity/doctordelete.jsp'/>" target="_parent">Delete Doctor Entity</a>	
+	<a href="<c:url value='/jsps/patient_surgeries_entity/doctorcreate.jsp'/>" target="_parent">Create Patient Surgeries Entity</a> |&nbsp; 
+	<a href="<c:url value='/jsps/patient_surgeries_entity/doctorread.jsp'/>" target="_parent">Read Patient Surgeries Entity</a> |&nbsp;
+	<a href="<c:url value='/jsps/patient_surgeries_entity/doctorupdate.jsp'/>" target="_parent">Update Patient Surgeries Entity</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/patient_surgeries_entity/doctordelete.jsp'/>" target="_parent">Delete Patient Surgeries Entity</a>	
 	    
   </body>
 </html>
