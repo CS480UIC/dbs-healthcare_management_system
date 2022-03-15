@@ -40,3 +40,24 @@ We would like to design and develop a database called healthcare_management_syst
 ![Alt text](/screenshots/MedicationRead.png?raw=true)
 ![Alt text](/screenshots/MedicationUpdate.png?raw=true)
 ![Alt text](/screenshots/MedicationDelete.png?raw=true)
+
+## CRUD for Hospital
+![Alt text](/screenshots/hospital.PNG?raw=true)
+![Alt text](/screenshots/hospital_create.PNG?raw=true)
+![Alt text](/screenshots/hospital_read.PNG?raw=true)
+![Alt text](/screenshots/hospital_update.PNG?raw=true)
+![Alt text](/screenshots/hospital_delete.PNG?raw=true)
+
+## CRUD for Insurance
+![Alt text](/screenshots/insurance.PNG?raw=true)
+![Alt text](/screenshots/insurance_create.PNG?raw=true)
+![Alt text](/screenshots/insurance_read.PNG?raw=true)
+![Alt text](/screenshots/insurance_update.PNG?raw=true)
+![Alt text](/screenshots/insurance_delete.PNG?raw=true)
+
+## CRUD for Patient Medication
+![Alt text](/screenshots/patient_medication.PNG?raw=true)
+![Alt text](/screenshots/patient_medication_create.PNG?raw=true)
+![Alt text](/screenshots/patient_medication_read.PNG?raw=true)
+![Alt text](/screenshots/patient_medication_update.PNG?raw=true)
+![Alt text](/screenshots/patient_medication_delete.PNG?raw=true)
