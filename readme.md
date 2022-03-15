@@ -61,3 +61,24 @@ We would like to design and develop a database called healthcare_management_syst
 ![Alt text](/screenshots/patient_medication_read.PNG?raw=true)
 ![Alt text](/screenshots/patient_medication_update.PNG?raw=true)
 ![Alt text](/screenshots/patient_medication_delete.PNG?raw=true)
+
+## CRUD for Patient
+![Alt text](/screenshots/Patient.PNG?raw=true)
+![Alt text](/screenshots/PatientCreate.PNG?raw=true)
+![Alt text](/screenshots/PatientRead.PNG?raw=true)
+![Alt text](/screenshots/PatientUpdate.PNG?raw=true)
+![Alt text](/screenshots/PatientDelete.PNG?raw=true)
+
+## CRUD for Patient Medical History
+![Alt text](/screenshots/MedicalHistory.PNG?raw=true)
+![Alt text](/screenshots/MedicalHistoryCreate.PNG?raw=true)
+![Alt text](/screenshots/MedicalHistoryRead.PNG?raw=true)
+![Alt text](/screenshots/MedicalHistoryUpdate.PNG?raw=true)
+![Alt text](/screenshots/MedicalHistoryDelete.PNG?raw=true)
+
+## CRUD for Patient Surgeries
+![Alt text](/screenshots/PatientSurgergies.PNG?raw=true)
+![Alt text](/screenshots/PatientSurgergiesCreate.PNG?raw=true)
+![Alt text](/screenshots/PatientSurgergiesCreateRead.PNG?raw=true)
+![Alt text](/screenshots/PatientSurgergiesCreateUpdate.PNG?raw=true)
+![Alt text](/screenshots/PatientSurgergiesCreateDelete.PNG?raw=true)
