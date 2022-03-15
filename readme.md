@@ -77,8 +77,8 @@ We would like to design and develop a database called healthcare_management_syst
 ![Alt text](/screenshots/MedicalHistoryDelete.PNG?raw=true)
 
 ## CRUD for Patient Surgeries
-![Alt text](/screenshots/PatientSurgergies.PNG?raw=true)
-![Alt text](/screenshots/PatientSurgergiesCreate.PNG?raw=true)
-![Alt text](/screenshots/PatientSurgergiesCreateRead.PNG?raw=true)
-![Alt text](/screenshots/PatientSurgergiesCreateUpdate.PNG?raw=true)
-![Alt text](/screenshots/PatientSurgergiesCreateDelete.PNG?raw=true)
+![Alt text](/screenshots/PatientSurgeries.PNG?raw=true)
+![Alt text](/screenshots/PatientSurgeriesCreate.PNG?raw=true)
+![Alt text](/screenshots/PatientSurgeriesCreateRead.PNG?raw=true)
+![Alt text](/screenshots/PatientSurgeriesCreateUpdate.PNG?raw=true)
+![Alt text](/screenshots/PatientSurgeriesCreateDelete.PNG?raw=true)
