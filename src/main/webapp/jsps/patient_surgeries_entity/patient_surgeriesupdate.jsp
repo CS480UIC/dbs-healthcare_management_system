@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update Patient Medical History</title>
+    <title>Update Patient Surgeries</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,13 @@
   </head>
   
   <body>
-  <h1>Update Patient Medical History</h1>
+  <h1>Update Patient Surgeries</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update Read Patient Medical History   :<input type="text" name="username" value="${form.username }"/>
+	Update Read Patient Surgeries   :<input type="text" name="username" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	<input type="submit" value="Update Patient Medical History"/>
+	<input type="submit" value="Update Patient Surgeries"/>
 </form>
   </body>
 </html>
