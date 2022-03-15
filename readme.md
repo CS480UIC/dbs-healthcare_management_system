@@ -18,3 +18,25 @@ We would like to design and develop a database called healthcare_management_syst
 
 
 
+## Screenshots:
+
+## CRUD for Doctor
+![Alt text](/screenshots/DoctorEntity.png?raw=true)
+![Alt text](/screenshots/DoctorCreate.png?raw=true)
+![Alt text](/screenshots/DoctorRead.png?raw=true)
+![Alt text](/screenshots/UpdateDoctor.png?raw=true)
+![Alt text](/screenshots/DoctorDelete.png?raw=true)
+
+## CRUD for Payment
+![Alt text](/screenshots/PaymentEntity.png?raw=true)
+![Alt text](/screenshots/PaymentCreate.png?raw=true)
+![Alt text](/screenshots/PaymentRead.png?raw=true)
+![Alt text](/screenshots/PaymentUpdate.png?raw=true)
+![Alt text](/screenshots/PaymentDelete.png?raw=true)
+
+## CRUD for Medication
+![Alt text](/screenshots/MedicationEntity.png?raw=true)
+![Alt text](/screenshots/MedicationCreate.png?raw=true)
+![Alt text](/screenshots/MedicationRead.png?raw=true)
+![Alt text](/screenshots/MedicationUpdate.png?raw=true)
+![Alt text](/screenshots/MedicationDelete.png?raw=true)
