@@ -1,1 +1,1 @@
-
+We normalized our database while implementing our Logical design. So we didn't have to normalize again for the Physical design. The database satifies the 1NF, 2NF and Boyce-Codd normal form. All the constraint and properties in the main tables satifies the normal form properties such as non-key columns depend on the primary key,no duplicate rows.  
