@@ -1,0 +1,6 @@
+Timestamp,insurance_id,insurance_company,start_date,end_date,insurance_plan,patient_id
+3/3/2022 17:44:56,1001,AFG Insurance,2021-01-05,2022-10-05,yearly plan,3434
+3/3/2022 17:45:34,2002,QWE insurance,2021-05-02,2022-08-05,6 month plan,1212
+3/3/2022 17:46:37,3003,DFG insurance,2021-02-03,2022-04-01,quarterly plan,3435
+3/3/2022 17:47:15,4004,HP insurance,2021-03-02,2022-03-02,yearly plan,56464
+3/3/2022 17:48:09,5005,LOP Insurace,2021-03-05,2022-05-09,yearly plan,6766
