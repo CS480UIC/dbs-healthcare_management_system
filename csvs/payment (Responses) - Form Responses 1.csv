@@ -1,0 +1,6 @@
+Timestamp,payment_id,first_name,last_name,type_of_payment,treatment,doc_referred,date,patient_id
+3/3/2022 17:56:42,100001,Adeem,shaik,credit card,Fever,Manoj Kumar,2022-01-12,3434
+3/3/2022 17:57:26,100002,nirmal,Alluri,echeck,Cough,Sumanth,2022-02-03,1212
+3/3/2022 17:58:34,100003,kavya,cher,echeck,thumb fracture,Shiva,2022-03-06,3435
+3/3/2022 18:00:01,100004,Pranavi,Alle,cash,headache,Anish,2022-04-09,56464
+3/3/2022 18:00:49,100005,Surya,vineeth,cash,hair loss,Teddy,2022-08-09,6766
