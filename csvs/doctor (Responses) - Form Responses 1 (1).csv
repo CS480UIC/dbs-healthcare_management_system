@@ -1,0 +1,6 @@
+Timestamp,doctor_id,first_name,last_name,contact_no,email,experience,department,address,hosipital_id
+3/3/2022 16:51:32,102,Manoj Kumar,Alluri,3129006364,mallur3@uic.edu,4,neuroscience,1429 w Lexington St ,1027
+3/3/2022 16:52:30,123,Sumanth ,Donepudi,3124567891,alluri.manog9@gmail.com,5,General,1430 W Taylor St,9023
+3/3/2022 16:53:52,453,Shiva ,Donga,4356748121,sdonep2@uic.edu,3,dental,1234 W Harrison St,312
+3/3/2022 16:55:59,324,Anish,Puli,3452134212,anish2@uic.edu,7,Cardiologist,1324 W Morgan St,5231
+3/3/2022 16:57:23,543,Teddy,Buddy,3162784563,teddy3@uic.edu,2,childcare,"907, W Edoka st",4123

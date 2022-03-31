@@ -1,0 +1,6 @@
+Timestamp,patient_id,first_name,last_name,contact_no,email,gender,age,address,user_name,password,hosipital_id,doctot_id
+3/3/2022 17:02:53,3434,Adeem,shaik,3242424656,adeem@gmai.com,Male,25,1438 W Taylor St,ade345,Adeem2k16,1027,102
+3/3/2022 17:05:56,1212,nirmal,Alluri,4563745671,nirmal@uic.edu,MALE,34,"564,W Morgan St",n3421,1.23E+06,9023,123
+3/3/2022 17:07:12,3435,kavya,cher,2134312351,kl234@gmnail.com,Female,22,"121,S Miller St",k342,k4de3,312,453
+3/3/2022 17:08:36,56464,Pranavi,Alle,6543453434,prav@uic.edu,Female,43,"234,N Michigan st",n564,hi594,5231,324
+3/3/2022 17:09:38,6766,Surya,vineeth,8185056522,hjuh@uic.edu,Male,32,"21,E polk",vg809,ftg2683,4123,543
