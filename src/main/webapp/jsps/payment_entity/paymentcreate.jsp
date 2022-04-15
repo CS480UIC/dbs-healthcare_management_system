@@ -22,29 +22,34 @@
   
   <body>
   <h1>Payment Entity Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-    ID	        ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+   
+		
+<form action="<c:url value='/PaymentServletCreate'/>" method="post">
+    Payment ID	        ：<input type="text" name="payment_id" value="${form.payment_id }"/>
+	<span style="color: red; font-weight: 900">${errors.payment_id }</span>
 	<br/>
-	First Name  :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	First Name  :<input type="text" name="first_name" value="${form.first_name }"/>
+	<span style="color: red; font-weight: 900">${errors.first_name }</span>
 	<br/>
-	Last Name   ：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	Last Name   ：<input type="password" name="last_name" value="${form.last_name }"/>
+	<span style="color: red; font-weight: 900">${errors.last_name }</span>
 	<br/>
-	Payment Type       ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Treatment	    ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Doctor Referred	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Date	：<input type="text" name="email" value="${form.email }"/>
+	Payment Type       ：<input type="text" name="type_of_payment" value="${form.type_of_payment }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
 	
+	Doctor Referred	：<input type="text" name="doc_referred" value="${form.doc_referred }"/>
+	<span style="color: red; font-weight: 900">${errors.doc_referred }</span>
+	<br/>
+	Date	：<input type="text" name="date" value="${form.date }"/>
+	<span style="color: red; font-weight: 900">${errors.date }</span>
+	<br/>
+	Treatment	    ：<input type="text" name="treatment" value="${form.treatment }"/>
+	<span style="color: red; font-weight: 900">${errors.treatment }</span>
+	<br/>
+	Patient ID	        ：<input type="text" name="patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
+	<br/>
 	
 	
 	

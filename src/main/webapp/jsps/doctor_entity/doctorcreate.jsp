@@ -22,32 +22,35 @@
   
   <body>
   <h1>Doctor Entity Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	First Name  :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/DoctorServletCreate'/>" method="post">
+    Doctor_ID	        ：<input type="text" name="doctor_id" value="${form.doctor_id }"/>
+	<span style="color: red; font-weight: 900">${errors.doctor_id }</span>
 	<br/>
-	Last Name   ：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	First Name  :<input type="text" name="first_name" value="${form.first_name }"/>
+	<span style="color: red; font-weight: 900">${errors.first_name }</span>
+	<br/>
+	Last Name   ：<input type="text" name="last_name" value="${form.last_name }"/>
+	<span style="color: red; font-weight: 900">${errors.last_name }</span>
 	<br/>
 	Email       ：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	Phone	    ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Phone	    ：<input type="text" name="contact_no" value="${form.contact_no }"/>
+	<span style="color: red; font-weight: 900">${errors.contact_no }</span>
 	<br/>
-	Experience	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Experience	：<input type="text" name="experience" value="${form.experience }"/>
+	<span style="color: red; font-weight: 900">${errors.experience }</span>
 	<br/>
-	Department	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	ID	        ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Address	    ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Department	：<input type="text" name="department" value="${form.department }"/>
+	<span style="color: red; font-weight: 900">${errors.department }</span>
 	<br/>
 	
+	Address	    ：<input type="text" name="address" value="${form.address }"/>
+	<span style="color: red; font-weight: 900">${errors.address }</span>
+	<br/>
+	Hospital_ID	        ：<input type="text" name="hospital_id" value="${form.hospital_id }"/>
+	<span style="color: red; font-weight: 900">${errors.hospital_id }</span>
+	<br/>
 	
 	
 	

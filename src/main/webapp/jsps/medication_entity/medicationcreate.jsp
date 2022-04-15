@@ -22,26 +22,33 @@
   
   <body>
   <h1>Medication Entity Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-    ID	        ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+<form action="<c:url value='/MedicationServletCreate'/>" method="post">
+    Medicine ID	        ：<input type="text" name="medicine_id" value="${form.medicine_id }"/>
+	<span style="color: red; font-weight: 900">${errors.medicine_id }</span>
 	<br/>
-	Medicine Name  :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Medicine Name  :<input type="text" name="medicine_name" value="${form.medicine_name }"/>
+	<span style="color: red; font-weight: 900">${errors.medicine_name }</span>
 	<br/>
 	
-	Price      ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Price      ：<input type="text" name="price" value="${form.price }"/>
+	<span style="color: red; font-weight: 900">${errors.price }</span>
 	<br/>
-	Manufacture date ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Manufacture date ：<input type="text" name="mfg_date" value="${form.mfg_date }"/>
+	<span style="color: red; font-weight: 900">${errors.mfg_date }</span>
 	<br/>
-	Expiry date：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Expiry date：<input type="text" name="exp_date" value="${form.exp_date }"/>
+	<span style="color: red; font-weight: 900">${errors.exp_date }</span>
 	<br/>
-	Company ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Company ：<input type="text" name="mfg_company" value="${form.mfg_company }"/>
+	<span style="color: red; font-weight: 900">${errors.mfg_company }</span>
 	<br/>
+	Doctor ID ：<input type="text" name="doctor_id" value="${form.doctor_id }"/>
+	<span style="color: red; font-weight: 900">${errors.doctor_id }</span>
+	<br/>
+	Patient ID ：<input type="text" name="patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
+	<br/>
+	
 	
 	
 	

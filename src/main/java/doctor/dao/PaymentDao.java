@@ -1,0 +1,149 @@
+package doctor.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+
+
+
+//import java.util.ArrayList;
+//import java.util.List;
+
+import doctor.domain.Payment;
+
+/**
+ * DDL functions performed in database
+ */
+public class PaymentDao {
+	
+	/**
+	 * user name to connect to the database 
+	 */
+	private String MySQL_user = "healthcaresystem"; //TODO change user
+	
+	/**
+	 * password of your username to connect to the database
+	 */
+	private String MySQL_password = "health"; //TODO change password
+
+	public Payment findByDID(Integer d_id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		Payment doctor = new Payment();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hospital_database", MySQL_user, MySQL_password);
+		    String sql = "select * from doctor where doctor_id=?";
+		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
+		    preparestatement.setInt(1,d_id);
+		    ResultSet resultSet = preparestatement.executeQuery();
+
+		    while(resultSet.next()){
+		    	Integer doctor_id = Integer.parseInt(resultSet.getString("doctor_id"));
+		    	System.out.print(doctor_id);
+		    	System.out.print(d_id);
+		    	if(doctor_id.equals(d_id)){
+		    		System.out.print("hiiiiiiiii");
+		    		doctor.setDoctor_id(doctor_id);
+		    		doctor.setAddress(resultSet.getString("address"));
+		    		doctor.setContact_no(resultSet.getString("contact_no"));
+		    		doctor.setDepartment(resultSet.getString("department"));
+		    		doctor.setExperience(Integer.parseInt(resultSet.getString("experience")));
+		    		doctor.setFirst_name(resultSet.getString("first_name"));
+		    		doctor.setHospital_id(Integer.parseInt(resultSet.getString("hospital_id")));
+		    		doctor.setLast_name(resultSet.getString("last_name"));
+		    		doctor.setEmail(resultSet.getString("email"));		
+		    	}
+		    }
+		    connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return doctor;
+	}	
+	
+	/**
+	 * insert Doctor
+	 * @param form
+	 * @throws ClassNotFoundException 
+	 * @throws IllegalAccessException 
+	 * @throws InstantiationException 
+	 */
+	
+	public void add(Payment form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hospital_database", MySQL_user, MySQL_password);
+			
+			String sql = "insert into doctor (doctor_id,first_name,last_name,email,contact_no,department,experience,address,hospital_id) values(?,?,?,?,?,?,?,?,?)";
+			//System.out.println(sql);
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+		    preparestatement.setInt(1,form.getDoctor_id());
+		    preparestatement.setString(2,form.getFirst_name());
+		    preparestatement.setString(3,form.getLast_name());
+		    preparestatement.setString(4,form.getEmail());
+		    preparestatement.setString(5,form.getContact_no());
+		    preparestatement.setString(6,form.getDepartment());
+		    preparestatement.setInt(7,form.getExperience());
+		    preparestatement.setString(8,form.getAddress());
+		    preparestatement.setInt(9,form.getHospital_id());
+		    preparestatement.executeUpdate();
+		    connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	
+	/**
+	 * @param form
+	 * @throws ClassNotFoundException
+	 * @throws InstantiationException
+	 * @throws IllegalAccessException
+	 */
+	public void update(Payment form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hospital_database", MySQL_user, MySQL_password);
+			
+			String sql = "UPDATE doctor SET first_name = ?, last_name = ?,email=?,contact_no=?,department=?,experience=?,address=?,hospital_id=? where doctor_id = ?;";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+		    preparestatement.setString(1,form.getFirst_name());
+			preparestatement.setString(2,form.getLast_name());
+		    preparestatement.setString(3,form.getEmail());
+		    preparestatement.setString(4,form.getContact_no());
+		    preparestatement.setString(5,form.getDepartment());
+		    preparestatement.setInt(6,form.getExperience());
+		    preparestatement.setString(7,form.getAddress());
+		    preparestatement.setInt(8,form.getHospital_id());
+		    preparestatement.setInt(9,form.getDoctor_id());
+		    preparestatement.executeUpdate();
+		    connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	
+	/**
+	 * @param d_id
+	 * @throws ClassNotFoundException
+	 * @throws InstantiationException
+	 * @throws IllegalAccessException
+	 */
+	public void delete(Integer d_id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hospital_database", MySQL_user, MySQL_password);
+			
+			String sql = "delete from doctor where doctor_id = ?";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+		    preparestatement.setInt(1,d_id);
+		    preparestatement.executeUpdate();
+		    connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+}
