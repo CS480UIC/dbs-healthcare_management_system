@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import doctor.domain.Payment;
+import doctor.domain.Doctor;
 import doctor.service.DoctorException;
-import doctor.service.PaymentService;
+import doctor.service.DoctorService;
 
 
 /**
@@ -41,9 +41,9 @@ public class DoctorServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PaymentService entity1service = new PaymentService();
+		DoctorService entity1service = new DoctorService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		Payment form = new Payment();
+		Doctor form = new Doctor();
 		List<String> info = new ArrayList<String>();
 
 		for(String name : paramMap.keySet()) {

@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import doctor.dao.PaymentDao;
-import doctor.domain.Payment;
+import doctor.dao.DoctorDao;
+import doctor.domain.Doctor;
 
 
 /**
@@ -36,8 +36,8 @@ public class DoctorServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		PaymentDao doctorDao = new PaymentDao();
-		Payment entity1 = null;
+		DoctorDao doctorDao = new DoctorDao();
+		Doctor entity1 = null;
 		if(method.equals("search"))
 		{
 			try {

@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import doctor.dao.PaymentDao;
-import doctor.domain.Payment;
+import doctor.dao.DoctorDao;
+import doctor.domain.Doctor;
 
 
 /**
@@ -37,8 +37,8 @@ public class DoctorServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Payment doctor = null;
-		PaymentDao entity1Dao = new PaymentDao();
+		Doctor doctor = null;
+	    DoctorDao entity1Dao = new DoctorDao();
 		
 		try {
 			System.out.println("doctor_id");

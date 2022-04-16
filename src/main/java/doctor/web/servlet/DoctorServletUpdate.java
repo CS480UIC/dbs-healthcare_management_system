@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import doctor.dao.PaymentDao;
-import doctor.domain.Payment;
+import doctor.dao.DoctorDao;
+import doctor.domain.Doctor;
 
 /**
  * Servlet implementation class UserServlet
@@ -41,8 +41,8 @@ public class DoctorServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		PaymentDao doctordao = new PaymentDao();
-		Payment entity1 = null;
+		DoctorDao doctordao = new DoctorDao();
+		Doctor entity1 = null;
 
 		if(method.equals("search"))
 		{
@@ -69,7 +69,7 @@ public class DoctorServletUpdate extends HttpServlet {
 		else if(method.equals("update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
-			Payment form = new Payment();
+			Doctor form = new Doctor();
 			List<String> info = new ArrayList<String>();
 
 			for(String name : paramMap.keySet()) {

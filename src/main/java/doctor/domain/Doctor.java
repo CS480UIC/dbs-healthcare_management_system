@@ -6,7 +6,7 @@ package doctor.domain;
  * @author Aayush Makharia
  * 
  */
-public class Payment {
+public class Doctor {
 	/*
 	 * Correspond to the user table
 	 */
