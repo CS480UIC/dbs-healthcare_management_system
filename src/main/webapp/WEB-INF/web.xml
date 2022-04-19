@@ -146,6 +146,51 @@
     <servlet-name>DoctorServletUpdate</servlet-name>
     <url-pattern>/DoctorServletUpdate</url-pattern>
   </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>PatientServletCreate</display-name>
+    <servlet-name>PatientServletCreate</servlet-name>
+    <servlet-class>patient.web.servlet.PatientServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientServletCreate</servlet-name>
+    <url-pattern>/PatientServletCreate</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PatientServletRead</display-name>
+    <servlet-name>PatientServletRead</servlet-name>
+    <servlet-class>patient.web.servlet.PatientServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientServletRead</servlet-name>
+    <url-pattern>/PatientServletRead</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>PatientServletDelete</display-name>
+    <servlet-name>PatientServletDelete</servlet-name>
+    <servlet-class>patient.web.servlet.PatientServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientServletDelete</servlet-name>
+    <url-pattern>/PatientServletDelete</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PatientServletUpdate</display-name>
+    <servlet-name>PatientServletUpdate</servlet-name>
+    <servlet-class>patient.web.servlet.PatientServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientServletUpdate</servlet-name>
+    <url-pattern>/PatientServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+  
   <servlet>
     <description></description>
     <display-name>MedicationServletCreate</display-name>

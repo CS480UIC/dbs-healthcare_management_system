@@ -22,7 +22,7 @@
   
   <body>
   <h1>Patient Entity Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value='/PatientServletCreate'/>" method="post">
 
 	Patient_ID	：<input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
