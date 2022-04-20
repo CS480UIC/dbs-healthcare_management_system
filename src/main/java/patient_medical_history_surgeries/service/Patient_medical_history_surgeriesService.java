@@ -1,16 +1,16 @@
-package patient_medical_history.service;
+package patient_medical_history_surgeries.service;
 
 
-import patient_medical_history.dao.Patient_medical_historyDao;
-import patient_medical_history.domain.Patient_medical_history;
+import patient_medical_history_surgeries.dao.Patient_medical_history_surgeriesDao;
+import patient_medical_history_surgeries.domain.Patient_medical_history_surgeries;
 
 /**
  * logic functions such as register, login
- * @author Aayush Makharia
+ * @author AB
  *
  */
-public class Patient_medical_historyService {
-	private Patient_medical_historyDao patient_medical_historyDao = new Patient_medical_historyDao();
+public class Patient_medical_history_surgeriesService {
+	private Patient_medical_history_surgeriesDao patient_medical_history_surgeriesDao = new Patient_medical_history_surgeriesDao();
 	
 	/**
 	 * register a Entity1
@@ -19,12 +19,12 @@ public class Patient_medical_historyService {
 	 * @throws IllegalAccessException 
 	 * @throws InstantiationException 
 	 */
-	public void create(Patient_medical_history form) throws Patient_medical_historyException, ClassNotFoundException, InstantiationException, IllegalAccessException{
+	public void create(Patient_medical_history_surgeries form) throws Patient_medical_history_surgeriesException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		// check the primary key of Entity1
 		//System.out.println(form);
-		Patient_medical_history patient_medical_history = patient_medical_historyDao.findByMID(form.getHistory_id());
-		if(patient_medical_history.getHistory_id() != null && patient_medical_history.getHistory_id()==form.getHistory_id()) throw new Patient_medical_historyException("This patient_medical_history name has been registered!");
-		patient_medical_historyDao.add(form);
+		Patient_medical_history_surgeries patient_medical_history_surgeries = patient_medical_history_surgeriesDao.findByMID(form.getHistory_id());
+		if(patient_medical_history_surgeries.getHistory_id() != null && patient_medical_history_surgeries.getHistory_id()==form.getHistory_id()) throw new Patient_medical_history_surgeriesException("This patient_medical_history_surgeries name has been registered!");
+		patient_medical_history_surgeriesDao.add(form);
 	}
 	
 	
