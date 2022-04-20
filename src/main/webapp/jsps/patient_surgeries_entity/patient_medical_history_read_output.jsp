@@ -21,24 +21,17 @@
   </head>
   
   <body>
-  <h1>Read Doctor Output</h1>
+  <h1>Read Patient Medical History Surgeries Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
 	
-	History ID	        ：<input type="text" name="history_id" value="${patient_medical_history.history_id }"/>
+	History ID	   ：<input type="text" name="history_id" value="${patient_medical_history_surgeries.history_id }"/>
 	<span style="color: red; font-weight: 900">${errors.history_id }</span>
 	<br/>
-	Conditions  :<input type="text" name="conditions" value="${patient_medical_history.conditions }"/>
-	<span style="color: red; font-weight: 900">${errors.conditions }</span>
-	<br/>
 	
 	
-	Last Visit：<input type="text" name="last_visit" value="${patient_medical_history.last_visit }"/>
-	<span style="color: red; font-weight: 900">${errors.last_visit }</span>
-	<br/>
-	
-	Patient ID ：<input type="text" name="patient_id" value="${patient_medical_history.patient_id }"/>
-	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
+	Surgeries ：<input type="text" name="surgeries" value="${patient_medical_history_surgeries.surgeries }"/>
+	<span style="color: red; font-weight: 900">${errors.surgeries }</span>
 	<br/>
 	
 </form>

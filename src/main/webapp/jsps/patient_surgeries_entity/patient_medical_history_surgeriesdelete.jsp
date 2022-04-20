@@ -22,10 +22,10 @@
   
   <body>
   <h1>Delete Patient Surgeries</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/Patient_medical_history_surgeriesServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Patient Surgeries   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Delete Patient Surgeries   :<input type="text" name="username" value="${form.history_id }"/>
+	<span style="color: red; font-weight: 900">${errors.history_id }</span>
 	<br/>
 	<input type="submit" value="Delete Patient Surgeries "/>
 </form>

@@ -22,13 +22,13 @@
   
   <body>
   <h1>Patient Surgeries Entity Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value='/Patient_medical_history_surgeriesServletCreate'/>" method="post">
 	
-	Surgeries	    ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Surgeries	    ：<input type="integer" name="email" value="${form.surgeries }"/>
+	<span style="color: red; font-weight: 900">${errors.surgeries }</span>
 	<br/>
-	ID	    ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	ID	    ：<input type="text" name="integer" value="${form.history_id }"/>
+	<span style="color: red; font-weight: 900">${errors.history_id }</span>
 	<br/>
 	
 	
