@@ -23,10 +23,10 @@
   <body>
   <h1>Read Hospital</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/HospitalServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	 Hospital   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	 Hospital   :<input type="text" name="username" value="${form.hospital_id }"/>
+	<span style="color: red; font-weight: 900">${errors.hospital_id }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>

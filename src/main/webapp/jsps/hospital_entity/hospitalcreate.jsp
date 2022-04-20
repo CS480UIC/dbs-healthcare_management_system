@@ -22,27 +22,29 @@
   
   <body>
   <h1>Hospital Entity Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	Name  :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/HospitalServletCreate'/>" method="post">
+
+	Hospital_ID	        ：<input type="text" name="hospital_id" value="${form.hospital_id }"/>
+	<span style="color: red; font-weight: 900">${errors.hospital_id }</span>
 	<br/>
-	
+	Name  :<input type="text" name="name" value="${form.name }"/>
+	<span style="color: red; font-weight: 900">${errors.name }</span>
+	<br/>
+	Address	    ：<input type="text" name="address" value="${form.address }"/>
+	<span style="color: red; font-weight: 900">${errors.address }</span>
+	<br/>
+	Phone	    ：<input type="text" name="contact_no" value="${form.contact_no }"/>
+	<span style="color: red; font-weight: 900">${errors.contact_no }</span>
+	<br/>
 	Email       ：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	Phone	    ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Employee count	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	
+	Employee Count	：<input type="text" name="employee_count" value="${form.employee_count }"/>
+	<span style="color: red; font-weight: 900">${errors.employee_count }</span>
 	<br/>
 	
-	ID	        ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Address	    ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
+	
 	
 	
 	

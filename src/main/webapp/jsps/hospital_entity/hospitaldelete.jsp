@@ -22,10 +22,10 @@
   
   <body>
   <h1>Delete Hospital</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/HospitalServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Hospital   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Delete Hospital   :<input type="text" name="hospital_id" value="${form.hospital_id }"/>
+	<span style="color: red; font-weight: 900">${errors.hospital_id }</span>
 	<br/>
 	<input type="submit" value="Delete Hospital "/>
 </form>
