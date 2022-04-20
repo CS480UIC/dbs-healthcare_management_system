@@ -25,7 +25,7 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
 	
-	History ID	        ：<input type="text" name="medicine_id" value="${patient_medical_history.history_id }"/>
+	History ID	        ：<input type="text" name="history_id" value="${patient_medical_history.history_id }"/>
 	<span style="color: red; font-weight: 900">${errors.history_id }</span>
 	<br/>
 	Conditions  :<input type="text" name="conditions" value="${patient_medical_history.conditions }"/>
