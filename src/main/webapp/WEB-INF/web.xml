@@ -190,6 +190,51 @@
   </servlet-mapping>
   
   
+  <servlet>
+    <description></description>
+    <display-name>HospitalServletCreate</display-name>
+    <servlet-name>HospitalServletCreate</servlet-name>
+    <servlet-class>hospital.web.servlet.HospitalServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HospitalServletCreate</servlet-name>
+    <url-pattern>/HospitalServletCreate</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>HospitalServletRead</display-name>
+    <servlet-name>HospitalServletRead</servlet-name>
+    <servlet-class>hospital.web.servlet.HospitalServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HospitalServletRead</servlet-name>
+    <url-pattern>/HospitalServletRead</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>HospitalServletDelete</display-name>
+    <servlet-name>HospitalServletDelete</servlet-name>
+    <servlet-class>hospital.web.servlet.HospitalServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HospitalServletDelete</servlet-name>
+    <url-pattern>/HospitalServletDelete</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>HospitalServletUpdate</display-name>
+    <servlet-name>HospitalServletUpdate</servlet-name>
+    <servlet-class>hospital.web.servlet.HospitalServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HospitalServletUpdate</servlet-name>
+    <url-pattern>/HospitalServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
   
   <servlet>
     <description></description>
