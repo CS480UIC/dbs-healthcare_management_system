@@ -1,4 +1,4 @@
-package patient_medical_history_surgeries.dao;
+package patient_medical_history_medication.dao;
 
 import java.sql.Connection;
 import java.sql.Date;
