@@ -5,7 +5,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
+import doctor.domain.Doctor;
 import patient.domain.Patient;
 
 
@@ -150,5 +153,27 @@ public class PatientDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	public List<Object> findall() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hospital_database", MySQL_user, MySQL_password);
+			String sql = "select * from patient";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Patient patient = new Patient();
+				patient.setFirst_name(resultSet.getString("first_name"));
+	    		patient.setEmail(resultSet.getString("email"));
+	    		patient.setContact_no(resultSet.getString("contact_no"));
+	    		list.add(patient);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
 	}
 }

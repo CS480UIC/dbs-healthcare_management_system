@@ -28,6 +28,7 @@
     <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>&nbsp;&nbsp;
       </br>
     <a href="<c:url value='/findDoctors'/>" target="body">Please list all the doctors</a>&nbsp;&nbsp;
-    
+      </br>
+    <a href="<c:url value='/findPatients'/>" target="body">Please list all the patients</a>&nbsp;&nbsp;
   </body>
 </html>
