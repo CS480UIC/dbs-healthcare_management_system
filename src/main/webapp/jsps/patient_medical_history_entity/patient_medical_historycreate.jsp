@@ -32,7 +32,7 @@
 	<br/>
 	
 	
-	Last Visit：<input type="text" name="exp_date" value="${form.last_visit }"/>
+	Last Visit：<input type="text" name="last_visit" value="${form.last_visit }"/>
 	<span style="color: red; font-weight: 900">${errors.last_visit }</span>
 	<br/>
 	
