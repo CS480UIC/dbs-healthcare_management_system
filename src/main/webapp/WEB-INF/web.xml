@@ -130,6 +130,17 @@
   </servlet-mapping>
   <servlet>
     <description></description>
+    <display-name>findHospitals</display-name>
+    <servlet-name>findHospitals</servlet-name>
+    
+    <servlet-class>hospital.web.servlet.findHospitals</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findHospitals</servlet-name>
+    <url-pattern>/findHospitals</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
     <display-name>DoctorServletCreate</display-name>
     <servlet-name>DoctorServletCreate</servlet-name>
     <servlet-class>doctor.web.servlet.DoctorServletCreate</servlet-class>

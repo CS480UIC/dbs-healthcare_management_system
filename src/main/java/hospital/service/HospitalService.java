@@ -1,6 +1,8 @@
 package hospital.service;
 
 
+import java.util.List;
+
 import hospital.dao.HospitalDao;
 import hospital.domain.Hospital;
 
@@ -26,6 +28,9 @@ public class HospitalService {
 		if(entity1.getHospital_id() != null && entity1.getHospital_id()==form.getHospital_id()) throw new HospitalException("This hospital name has been registered!");
 		hospitalDao.add(form);
 	}
-	
+	public List<Object> findall() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return hospitalDao.findall();
+		
+	}
 	
 }
