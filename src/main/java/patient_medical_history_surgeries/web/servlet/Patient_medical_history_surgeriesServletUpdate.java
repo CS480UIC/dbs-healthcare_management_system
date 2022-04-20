@@ -1,4 +1,4 @@
-package patient_medical_history.web.servlet;
+package patient_medical_history_surgeries.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,20 +11,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import patient_medical_history.dao.Patient_medical_historyDao;
-import patient_medical_history.domain.Patient_medical_history;
+import patient_medical_history_surgeries.dao.Patient_medical_history_surgeriesDao;
+import patient_medical_history_surgeries.domain.Patient_medical_history_surgeries;
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Patient_medical_historyServletUpdate extends HttpServlet {
+public class Patient_medical_history_surgeriesServletUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public Patient_medical_historyServletUpdate() {
+	public Patient_medical_history_surgeriesServletUpdate() {
 		super();
 	}
 
@@ -41,13 +41,13 @@ public class Patient_medical_historyServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		Patient_medical_historyDao patient_medical_historydao = new Patient_medical_historyDao();
-		Patient_medical_history patient_medical_history = null;
+		Patient_medical_history_surgeriesDao patient_medical_history_surgeriesdao = new Patient_medical_history_surgeriesDao();
+		Patient_medical_history_surgeries patient_medical_history_surgeries = null;
 
 		if(method.equals("search"))
 		{
 			try {
-				patient_medical_history = patient_medical_historydao.findByMID(Integer.parseInt(request.getParameter("history_id")));
+				patient_medical_history_surgeries = patient_medical_history_surgeriesdao.findByMID(Integer.parseInt(request.getParameter("history_id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -56,20 +56,20 @@ public class Patient_medical_historyServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(patient_medical_history.getHistory_id()!=null){
-				request.setAttribute("patient_medical_history", patient_medical_history);
-				request.getRequestDispatcher("/jsps/patient_medical_history_entity/patient_medical_history_update_output.jsp").forward(request, response);
+			if(patient_medical_history_surgeries.getHistory_id()!=null){
+				request.setAttribute("patient_medical_history_surgeries", patient_medical_history_surgeries);
+				request.getRequestDispatcher("/jsps/patient_medical_history_surgeries_entity/patient_medical_history_surgeries_update_output.jsp").forward(request, response);
 
 			}
 			else{
 				request.setAttribute("msg", "Payment not found");
-				request.getRequestDispatcher("/jsps/patient_medical_history_entity/patient_medical_history_read_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/patient_medical_history_surgeries_entity/patient_medical_history_surgeries_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
-			Patient_medical_history form = new Patient_medical_history();
+			Patient_medical_history_surgeries form = new Patient_medical_history_surgeries();
 			List<String> info = new ArrayList<String>();
 
 			for(String name : paramMap.keySet()) {
@@ -79,13 +79,11 @@ public class Patient_medical_historyServletUpdate extends HttpServlet {
 			System.out.print(info);
 			
 			form.setHistory_id(Integer.parseInt(info.get(1)));
-			form.setConditions(info.get(2));
-			form.setLast_visit(java.sql.Date.valueOf(info.get(3)));
 			
-			form.setPatient_id(Integer.parseInt(info.get(4)));
+			form.setSurgeries(Integer.parseInt(info.get(2)));
 
 			try {
-				patient_medical_historydao.update(form);
+				patient_medical_history_surgeriesdao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -94,8 +92,8 @@ public class Patient_medical_historyServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Patient_medical_history Updated");
-			request.getRequestDispatcher("/jsps/patient_medical_history_entity/patient_medical_history_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Patient_medical_history_surgeries Updated");
+			request.getRequestDispatcher("/jsps/patient_medical_history_surgeries_entity/patient_medical_history_surgeries_read_output.jsp").forward(request, response);
 		}
 	}
 }
