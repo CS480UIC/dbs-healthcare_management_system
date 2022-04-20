@@ -8,21 +8,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import patient_medical_history_surgeries.dao.Patient_medical_history_surgeriesDao;
-import patient_medical_history_surgeries.domain.Patient_medical_history_surgeries;
+import patient_medical_history_surgeries.dao.PatientMedicalHistorySurgeriesDao;
+import patient_medical_history_surgeries.domain.PatientMedicalHistorySurgeries;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Patient_medical_history_surgeriesServletRead extends HttpServlet {
+public class PatientMedicalHistorySurgeriesServletRead extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Patient_medical_history_surgeriesServletRead() {
+    public PatientMedicalHistorySurgeriesServletRead() {
         super();
     }
     
@@ -37,8 +37,8 @@ public class Patient_medical_history_surgeriesServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Patient_medical_history_surgeries patient_medical_history_surgeries = null;
-	    Patient_medical_history_surgeriesDao patient_medical_history_surgeriesDao = new Patient_medical_history_surgeriesDao();
+		PatientMedicalHistorySurgeries patient_medical_history_surgeries = null;
+	    PatientMedicalHistorySurgeriesDao patient_medical_history_surgeriesDao = new PatientMedicalHistorySurgeriesDao();
 		
 		try {
 			
@@ -58,7 +58,7 @@ public class Patient_medical_history_surgeriesServletRead extends HttpServlet {
 					request.getRequestDispatcher("/jsps/patient_medical_history_surgeries_entity/patient_medical_history_surgeries_read_output.jsp").forward(request, response);
 			}
 			else{
-			request.setAttribute("msg", "Patient_medical_history_surgeries not found");
+			request.setAttribute("msg", "PatientMedicalHistorySurgeries not found");
 			request.getRequestDispatcher("/jsps/patient_medical_history_surgeries_entity/patient_medical_history_surgeries_read_output.jsp").forward(request, response);
 		}
 	}

@@ -11,21 +11,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import patient_medical_history_surgeries.dao.Patient_medical_history_surgeriesDao;
-import patient_medical_history_surgeries.domain.Patient_medical_history_surgeries;
+import patient_medical_history_surgeries.dao.PatientMedicalHistorySurgeriesDao;
+import patient_medical_history_surgeries.domain.PatientMedicalHistorySurgeries;
 import patient_medical_history_surgeries.service.*;
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Patient_medical_history_surgeriesServletUpdate extends HttpServlet {
+public class PatientMedicalHistorySurgeriesServletUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public Patient_medical_history_surgeriesServletUpdate() {
+	public PatientMedicalHistorySurgeriesServletUpdate() {
 		super();
 	}
 
@@ -42,8 +42,8 @@ public class Patient_medical_history_surgeriesServletUpdate extends HttpServlet 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		Patient_medical_history_surgeriesDao patient_medical_history_surgeriesdao = new Patient_medical_history_surgeriesDao();
-		Patient_medical_history_surgeries patient_medical_history_surgeries = null;
+		PatientMedicalHistorySurgeriesDao patient_medical_history_surgeriesdao = new PatientMedicalHistorySurgeriesDao();
+		PatientMedicalHistorySurgeries patient_medical_history_surgeries = null;
 
 		if(method.equals("search"))
 		{
@@ -79,7 +79,7 @@ public class Patient_medical_history_surgeriesServletUpdate extends HttpServlet 
 		else if(method.equals("update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
-			Patient_medical_history_surgeries form = new Patient_medical_history_surgeries();
+			PatientMedicalHistorySurgeries form = new PatientMedicalHistorySurgeries();
 			List<String> info = new ArrayList<String>();
 
 			for(String name : paramMap.keySet()) {
@@ -91,19 +91,19 @@ public class Patient_medical_history_surgeriesServletUpdate extends HttpServlet 
 			form.setHistory_id(Integer.parseInt(info.get(1)));
 			
 			form.setSurgeries(Integer.parseInt(info.get(2)));
-			Patient_medical_history_surgeriesService entity1service = new Patient_medical_history_surgeriesService();
+			PatientMedicalHistorySurgeriesService entity1service = new PatientMedicalHistorySurgeriesService();
 			
 			try {
 				entity1service.create(form);
 
-			} catch (ClassNotFoundException | Patient_medical_history_surgeriesException e1) {
+			} catch (ClassNotFoundException | PatientMedicalHistorySurgeriesException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
 				e1.printStackTrace();
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Patient_medical_history_surgeries Updated");
+			request.setAttribute("msg", "PatientMedicalHistorySurgeries Updated");
 			request.getRequestDispatcher("/jsps/patient_medical_history_surgeries_entity/patient_medical_history_surgeries_read_output.jsp").forward(request, response);
 		}
 	}

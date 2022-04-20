@@ -8,7 +8,7 @@ import java.sql.Date;
  * @author Aayush Makharia
  * 
  */
-public class Patient_medical_history {
+public class PatientMedicalHistory {
 	/*
 	 * Correspond to the user table
 	 */

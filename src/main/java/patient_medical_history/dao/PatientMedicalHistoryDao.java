@@ -1,4 +1,4 @@
-package patient_medical_history_surgeries.dao;
+package patient_medical_history.dao;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -13,12 +13,12 @@ import java.sql.SQLException;
 //import java.util.ArrayList;
 //import java.util.List;
 
-import patient_medical_history_surgeries.domain.Patient_medical_history_surgeries;
+import patient_medical_history.domain.PatientMedicalHistory;
 
 /**
  * DDL functions performed in database
  */
-public class Patient_medical_history_surgeriesDao {
+public class PatientMedicalHistoryDao {//PatientMedicalHistoryDao
 	
 	/**
 	 * user name to connect to the database 
@@ -30,26 +30,26 @@ public class Patient_medical_history_surgeriesDao {
 	 */
 	private String MySQL_password = "health"; //TODO change password
 
-	public Patient_medical_history_surgeries findByMID(Integer ps_id, Integer s_id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Patient_medical_history_surgeries patient_medical_history_surgeries= new Patient_medical_history_surgeries();
+	public PatientMedicalHistory findByMID(Integer pm_id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		PatientMedicalHistory patient_medical_history= new PatientMedicalHistory();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hospital_database", MySQL_user, MySQL_password);
-		    String sql = "select * from patient_medical_history_surgeries where history_id=? and surgeries = ? ";
+		    String sql = "select * from patient_medical_history where medicine_id=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setInt(1,ps_id);
-		    preparestatement.setInt(2,s_id);
+		    preparestatement.setInt(1,pm_id);
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
 		    	Integer history_id = Integer.parseInt(resultSet.getString("history_id"));
-		    	Integer surgeries=Integer.parseInt(resultSet.getString("surgeries"));
 		    	System.out.print(history_id);
-		    	System.out.print(ps_id);
-		    	if((history_id.equals(ps_id))  && (surgeries.equals(s_id)) ){
+		    	System.out.print(pm_id);
+		    	if(history_id.equals(pm_id)){
 		    		System.out.print("hiiiiiiiii");
-		    		patient_medical_history_surgeries.setHistory_id(history_id);
-		    		patient_medical_history_surgeries.setSurgeries(surgeries);
+		    		patient_medical_history.setHistory_id(history_id);
+		    		patient_medical_history.setConditions(resultSet.getString("conditions"));
+		    		patient_medical_history.setLast_visit(java.sql.Date.valueOf(resultSet.getString("last_visit")));
+		    		patient_medical_history.setPatient_id(Integer.parseInt(resultSet.getString("patient_id")));
 		    		
 		    	
 		    	}
@@ -58,7 +58,7 @@ public class Patient_medical_history_surgeriesDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
-		return patient_medical_history_surgeries;
+		return patient_medical_history;
 	}	
 	
 	/**
@@ -69,16 +69,18 @@ public class Patient_medical_history_surgeriesDao {
 	 * @throws InstantiationException 
 	 */
 	
-	public void add(Patient_medical_history_surgeries form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void add(PatientMedicalHistory form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hospital_database", MySQL_user, MySQL_password);
 			
-			String sql = "insert into patient_medical_history_surgeries (history_id,conditions,surgeries) values(?,?)";
+			String sql = "insert into patient_medical_history (history_id,conditions,last_visit,patient_id) values(?,?,?,?)";
 			//System.out.println(sql);
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,form.getHistory_id());
-		    preparestatement.setInt(2,form.getSurgeries());
+		    preparestatement.setString(2,form.getConditions());
+		    preparestatement.setDate(3,form.getLast_visit());
+		    preparestatement.setInt(4,form.getPatient_id());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -93,22 +95,18 @@ public class Patient_medical_history_surgeriesDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void update(Patient_medical_history_surgeries form, Patient_medical_history_surgeries patient_medical_history_surgeries) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void update(PatientMedicalHistory form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hospital_database", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE patient_medical_history_surgeries SET surgeries=?, history_id=? where history_id = ? and surgeries = ?;";
+			String sql = "UPDATE patient_medical_history SET conditions = ?, last_visit=?,patient_id=? where history_id = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			
-		   
-		    
-		    preparestatement.setInt(1,form.getHistory_id());
-		    preparestatement.setInt(2,form.getSurgeries());
-		    
-		    preparestatement.setFloat(3,patient_medical_history_surgeries.getHistory_id());
-		    preparestatement.setInt(4,patient_medical_history_surgeries.getSurgeries());
-		    
+		    preparestatement.setString(1,form.getConditions());
+		    preparestatement.setDate(2,form.getLast_visit());
+		    preparestatement.setInt(3,form.getPatient_id());
+		    preparestatement.setInt(4,form.getHistory_id());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -123,15 +121,14 @@ public class Patient_medical_history_surgeriesDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void delete(Integer ps_id, Integer s_id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void delete(Integer pm_id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hospital_database", MySQL_user, MySQL_password);
 			
-			String sql = "delete from patient_medical_history_surgeries where history_id = ? and surgeries = ? ";
+			String sql = "delete from patient_medical_history where history_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setInt(1,ps_id);
-		    preparestatement.setInt(1,s_id);
+		    preparestatement.setInt(1,pm_id);
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

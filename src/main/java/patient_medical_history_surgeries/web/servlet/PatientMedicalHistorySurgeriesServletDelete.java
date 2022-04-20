@@ -6,21 +6,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import patient_medical_history_surgeries.dao.Patient_medical_history_surgeriesDao;
-import patient_medical_history_surgeries.domain.Patient_medical_history_surgeries;
+import patient_medical_history_surgeries.dao.PatientMedicalHistorySurgeriesDao;
+import patient_medical_history_surgeries.domain.PatientMedicalHistorySurgeries;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Patient_medical_history_surgeriesServletDelete extends HttpServlet {
+public class PatientMedicalHistorySurgeriesServletDelete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Patient_medical_history_surgeriesServletDelete() {
+    public PatientMedicalHistorySurgeriesServletDelete() {
         super();
     }
     
@@ -36,8 +36,8 @@ public class Patient_medical_history_surgeriesServletDelete extends HttpServlet 
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		Patient_medical_history_surgeriesDao patient_medical_history_surgeriesDao = new Patient_medical_history_surgeriesDao();
-		Patient_medical_history_surgeries patient_medical_history_surgeries = null;
+		PatientMedicalHistorySurgeriesDao patient_medical_history_surgeriesDao = new PatientMedicalHistorySurgeriesDao();
+		PatientMedicalHistorySurgeries patient_medical_history_surgeries = null;
 		if(method.equals("search"))
 		{
 			try {
@@ -56,7 +56,7 @@ public class Patient_medical_history_surgeriesServletDelete extends HttpServlet 
 						request.getRequestDispatcher("/jsps/patient_medical_history_surgeries_entity/patient_medical_history_surgeries_delete_output.jsp").forward(request, response);			
 				}
 				else{
-				request.setAttribute("msg", "Patient_medical_history_surgeries not found");
+				request.setAttribute("msg", "PatientMedicalHistorySurgeries not found");
 				request.getRequestDispatcher("/jsps/patient_medical_history_surgeries_entity/patient_medical_history_surgeries_read_output.jsp").forward(request, response);
 			}
 		}
@@ -71,7 +71,7 @@ public class Patient_medical_history_surgeriesServletDelete extends HttpServlet 
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Patient_medical_history_surgeries Deleted");
+			request.setAttribute("msg", "PatientMedicalHistorySurgeries Deleted");
 			request.getRequestDispatcher("/jsps/patient_medical_history_surgeries_entity/patient_medical_history_surgeries_read_output.jsp").forward(request, response);
 		}
 	}

@@ -1,4 +1,4 @@
-package patient_medical_history.web.servlet;
+package patient_medical_history_surgeries.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,22 +11,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import patient_medical_history.domain.Patient_medical_history;
-import patient_medical_history.service.Patient_medical_historyException;
-import patient_medical_history.service.Patient_medical_historyService;
+import patient_medical_history_surgeries.domain.PatientMedicalHistorySurgeries;
+import patient_medical_history_surgeries.service.PatientMedicalHistorySurgeriesException;
+import patient_medical_history_surgeries.service.PatientMedicalHistorySurgeriesService;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Patient_medical_historyServletCreate extends HttpServlet {
+public class PatientMedicalHistorySurgeriesServletCreate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Patient_medical_historyServletCreate() {
+    public PatientMedicalHistorySurgeriesServletCreate() {
         super();
     }
 
@@ -41,9 +41,9 @@ public class Patient_medical_historyServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Patient_medical_historyService paymentservice = new Patient_medical_historyService();
+		PatientMedicalHistorySurgeriesService paymentservice = new PatientMedicalHistorySurgeriesService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		Patient_medical_history form = new Patient_medical_history();
+		PatientMedicalHistorySurgeries form = new PatientMedicalHistorySurgeries();
 		List<String> info = new ArrayList<String>();
 
 		for(String name : paramMap.keySet()) {
@@ -55,16 +55,14 @@ public class Patient_medical_historyServletCreate extends HttpServlet {
 		
 		 
 		form.setHistory_id(Integer.parseInt(info.get(0)));
-		form.setConditions(info.get(1));
-		form.setLast_visit(java.sql.Date.valueOf(info.get(2)));	
 		
-		form.setPatient_id(Integer.parseInt(info.get(3)));
+		form.setSurgeries(Integer.parseInt(info.get(1)));
 		
 		try {
 			paymentservice.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
-		} catch (ClassNotFoundException | Patient_medical_historyException e) {
+		} catch (ClassNotFoundException | PatientMedicalHistorySurgeriesException e) {
 			e.printStackTrace();
 		} catch (InstantiationException e) {
 			e.printStackTrace();

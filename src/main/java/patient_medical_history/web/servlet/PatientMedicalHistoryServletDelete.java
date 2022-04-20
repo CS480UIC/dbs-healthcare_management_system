@@ -6,21 +6,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import patient_medical_history.dao.Patient_medical_historyDao;
-import patient_medical_history.domain.Patient_medical_history;
+import patient_medical_history.dao.PatientMedicalHistoryDao;
+import patient_medical_history.domain.PatientMedicalHistory;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Patient_medical_historyServletDelete extends HttpServlet {
+public class PatientMedicalHistoryServletDelete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Patient_medical_historyServletDelete() {
+    public PatientMedicalHistoryServletDelete() {
         super();
     }
     
@@ -36,8 +36,8 @@ public class Patient_medical_historyServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		Patient_medical_historyDao patient_medical_historyDao = new Patient_medical_historyDao();
-		Patient_medical_history patient_medical_history = null;
+		PatientMedicalHistoryDao patient_medical_historyDao = new PatientMedicalHistoryDao();
+		PatientMedicalHistory patient_medical_history = null;
 		if(method.equals("search"))
 		{
 			try {
@@ -56,7 +56,7 @@ public class Patient_medical_historyServletDelete extends HttpServlet {
 						request.getRequestDispatcher("/jsps/patient_medical_history_entity/patient_medical_history_delete_output.jsp").forward(request, response);			
 				}
 				else{
-				request.setAttribute("msg", "Patient_medical_history not found");
+				request.setAttribute("msg", "PatientMedicalHistory not found");
 				request.getRequestDispatcher("/jsps/patient_medical_history_entity/patient_medical_history_read_output.jsp").forward(request, response);
 			}
 		}
@@ -71,7 +71,7 @@ public class Patient_medical_historyServletDelete extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Patient_medical_history Deleted");
+			request.setAttribute("msg", "PatientMedicalHistory Deleted");
 			request.getRequestDispatcher("/jsps/patient_medical_history_entity/patient_medical_history_read_output.jsp").forward(request, response);
 		}
 	}

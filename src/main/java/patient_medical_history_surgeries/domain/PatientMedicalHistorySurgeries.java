@@ -8,7 +8,7 @@ import java.sql.Date;
  * @author AB
  * 
  */
-public class Patient_medical_history_surgeries {
+public class PatientMedicalHistorySurgeries {
 	/*
 	 * Correspond to the user table
 	 */
@@ -29,7 +29,7 @@ public class Patient_medical_history_surgeries {
 	}
 	@Override
 	public String toString() {
-		return "Patient_medical_history_surgeries [history_id=" + history_id + ", surgeries=" + surgeries + "]";
+		return "PatientMedicalHistorySurgeries [history_id=" + history_id + ", surgeries=" + surgeries + "]";
 	}
 	
 	

@@ -11,20 +11,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import patient_medical_history.dao.Patient_medical_historyDao;
-import patient_medical_history.domain.Patient_medical_history;
+import patient_medical_history.dao.PatientMedicalHistoryDao;
+import patient_medical_history.domain.PatientMedicalHistory;
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Patient_medical_historyServletUpdate extends HttpServlet {
+public class PatientMedicalHistoryServletUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public Patient_medical_historyServletUpdate() {
+	public PatientMedicalHistoryServletUpdate() {
 		super();
 	}
 
@@ -41,8 +41,8 @@ public class Patient_medical_historyServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		Patient_medical_historyDao patient_medical_historydao = new Patient_medical_historyDao();
-		Patient_medical_history patient_medical_history = null;
+		PatientMedicalHistoryDao patient_medical_historydao = new PatientMedicalHistoryDao();
+		PatientMedicalHistory patient_medical_history = null;
 
 		if(method.equals("search"))
 		{
@@ -69,7 +69,7 @@ public class Patient_medical_historyServletUpdate extends HttpServlet {
 		else if(method.equals("update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
-			Patient_medical_history form = new Patient_medical_history();
+			PatientMedicalHistory form = new PatientMedicalHistory();
 			List<String> info = new ArrayList<String>();
 
 			for(String name : paramMap.keySet()) {
@@ -94,7 +94,7 @@ public class Patient_medical_historyServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Patient_medical_history Updated");
+			request.setAttribute("msg", "PatientMedicalHistory Updated");
 			request.getRequestDispatcher("/jsps/patient_medical_history_entity/patient_medical_history_read_output.jsp").forward(request, response);
 		}
 	}
