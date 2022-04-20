@@ -24,8 +24,8 @@
   <h1>Update Entity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	History ID	：<input type="text" name="medicine_id" value="${patient_medical_history.medicine_id }"/>
-	<span style="color: red; font-weight: 900">${errors.medicine_id }</span>
+	History ID	：<input type="text" name="medicine_id" value="${patient_medical_history.history_id }"/>
+	<span style="color: red; font-weight: 900">${errors.history_id }</span>
 	<br/>
 	Conditions  :<input type="text" name="conditions" value="${patient_medical_history.conditions }"/>
 	<span style="color: red; font-weight: 900">${errors.conditions }</span>
@@ -42,9 +42,9 @@
 	
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/MedicationServletUpdate'/>" method="post">
+<form action="<c:url value='/Patient_medical_historyServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="medicine_id" value="${patient_medical_history.medicine_id }"/>
+				<input type="hidden" name="history_id" value="${patient_medical_history.history_id  }"/>
 		<br/>
 	
 

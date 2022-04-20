@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity Output</title>
+    <title>Delete Entity</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,11 +21,12 @@
   </head>
   
   <body>
-  <h1>Read Doctor Output</h1>
+  <h1>Delete Entity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form>
-	
-	History ID	        ：<input type="text" name="medicine_id" value="${patient_medical_history.history_id }"/>
+<form action="<c:url value='/MedicationServletDelete'/>" method="post">
+	<input type="hidden" name="method" value="delete"/>
+		<input type="hidden" name="history_id" value="${patient_medical_history.history_id   }"/>
+	 History ID	        ：<input type="text" name="medicine_id" value="${patient_medical_history.history_id }"/>
 	<span style="color: red; font-weight: 900">${errors.history_id }</span>
 	<br/>
 	Conditions  :<input type="text" name="conditions" value="${patient_medical_history.conditions }"/>
@@ -40,9 +41,8 @@
 	Patient ID ：<input type="text" name="patient_id" value="${patient_medical_history.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
-	
+	<input type="submit" value="Delete Patient_medical_history"/>
 </form>
 
-<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
 </body>
 </html>
