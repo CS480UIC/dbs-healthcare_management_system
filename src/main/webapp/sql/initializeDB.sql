@@ -114,7 +114,7 @@ CREATE INDEX `doctor_id_idx` ON `hospital_database`.`patient` (`doctor_id` ASC) 
 
 LOCK TABLES `patient` WRITE;
 /*!40000 ALTER TABLE `patient` DISABLE KEYS */;
-INSERT INTO `patient` VALUES (1212,'nirmal','Alluri','4563745671','nirmal@uic.edu','MALE',34,'n3421','1.23E+06',9023,123,'1429 W Lexignton st'),(3434,'Adeem','shaik','3242424656','adeem@gmai.com','Male',25,'ade345','Adeem2k16',1027,102,'1429 W Lexignton st'),(3435,'kavya','cher','2134312351','kl234@gmnail.com','Female',22,'k342','k4de3',312,453,'1429 W Lexignton st'),(6766,'Surya','vineeth','8185056522','hjuh@uic.edu','Male',32,'vg809','ftg2683',4123,543,'1429 W Lexignton st'),(56464,'Pranavi','Alle','6543453434','prav@uic.edu','Female',43,'n564','hi594',5231,324,'1429 W Lexignton st');
+INSERT INTO `patient` VALUES (1212,'nirmal','Alluri','4563745671','nirmal@uic.edu','MALE',34,'n3421','1.23E+06',9023,123),(3434,'Adeem','shaik','3242424656','adeem@gmai.com','Male',25,'ade345','Adeem2k16',1027,102),(3435,'kavya','cher','2134312351','kl234@gmnail.com','Female',22,'k342','k4de3',312,453),(6766,'Surya','vineeth','8185056522','hjuh@uic.edu','Male',32,'vg809','ftg2683',4123,543),(56464,'Pranavi','Alle','6543453434','prav@uic.edu','Female',43,'n564','hi594',5231,324);
 /*!40000 ALTER TABLE `patient` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -305,8 +305,8 @@ DROP TABLE IF EXISTS `hospital_database`.`patient_medical_history_surgeries` ;
 
 CREATE TABLE IF NOT EXISTS `hospital_database`.`patient_medical_history_surgeries` (
   `history_id` INT NOT NULL,
-  `surgeries` INT NOT NULL,
-  PRIMARY KEY (`history_id`, `surgeries`),
+  `surgeries` VARCHAR(30) NOT NULL,
+  PRIMARY KEY (`history_id`),
   CONSTRAINT `history_surgeries_id`
     FOREIGN KEY (`history_id`)
     REFERENCES `hospital_database`.`patient_medical_history` (`history_id`)
