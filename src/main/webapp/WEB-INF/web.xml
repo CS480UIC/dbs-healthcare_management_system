@@ -108,6 +108,17 @@
   </servlet-mapping>
   <servlet>
     <description></description>
+    <display-name>findDoctors</display-name>
+    <servlet-name>findDoctors</servlet-name>
+    
+    <servlet-class>doctor.web.servlet.findDoctors</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findDoctors</servlet-name>
+    <url-pattern>/findDoctors</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
     <display-name>DoctorServletCreate</display-name>
     <servlet-name>DoctorServletCreate</servlet-name>
     <servlet-class>doctor.web.servlet.DoctorServletCreate</servlet-class>

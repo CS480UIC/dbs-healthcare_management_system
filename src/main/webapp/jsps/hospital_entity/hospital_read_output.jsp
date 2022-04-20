@@ -25,7 +25,7 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
 	
-	Hospital_ID	        ：<input type="text" name="hospital_id" value="${hospital.hospital_id }"/>
+	Hospital_ID	  ：<input type="text" name="hospital_id" value="${hospital.hospital_id }"/>
 	<span style="color: red; font-weight: 900">${errors.hospital_id }</span>
 	<br/>
 	Name  :<input type="text" name="first_name" value="${hospital.name }"/>

@@ -1,6 +1,8 @@
 package doctor.service;
 
 
+import java.util.List;
+
 import doctor.dao.DoctorDao;
 import doctor.domain.Doctor;
 
@@ -25,6 +27,11 @@ public class DoctorService {
 		Doctor entity1 = doctorDao.findByDID(form.getDoctor_id());
 		if(entity1.getDoctor_id() != null && entity1.getDoctor_id()==form.getDoctor_id()) throw new DoctorException("This doctor name has been registered!");
 		doctorDao.add(form);
+	}
+	
+	public List<Object> findall() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return doctorDao.findall();
+		
 	}
 	
 	
