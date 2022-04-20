@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>Update Patient Surgeries</h1>
+  <h1>Update Patient Medical History Surgeries</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	
@@ -32,7 +32,7 @@
 	Update Read Patient Surgeries   :<input type="text" name="surgeries" value="${form.surgeries }"/>
 	<span style="color: red; font-weight: 900">${errors.surgeries }</span>
 	<br/>
-	<input type="submit" value="Update Patient Surgeries"/>
+	<input type="submit" value="Update Patient Medical History Surgeries"/>
 </form>
   </body>
 </html>
