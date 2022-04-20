@@ -34,7 +34,7 @@
 	<br/>
 	
 	
-	Last Visit：<input type="text" name="exp_date" value="${patient_medical_history.last_visit }"/>
+	Last Visit：<input type="text" name="last_visit" value="${patient_medical_history.last_visit }"/>
 	<span style="color: red; font-weight: 900">${errors.last_visit }</span>
 	<br/>
 	

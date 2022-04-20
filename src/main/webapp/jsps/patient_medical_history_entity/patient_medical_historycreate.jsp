@@ -22,43 +22,25 @@
   
   <body>
   <h1>Patient Medical History Entity Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	First Name  :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/Patient_medical_historyServletCreate'/>" method="post">
+
+	History ID	        ：<input type="text" name="history_id" value="${form.history_id }"/>
+	<span style="color: red; font-weight: 900">${errors.history_id }</span>
 	<br/>
-	Last Name   ：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	Conditions  :<input type="text" name="conditions" value="${form.conditions }"/>
+	<span style="color: red; font-weight: 900">${errors.conditions }</span>
 	<br/>
-	Email       ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	
+	
+	Last Visit：<input type="text" name="exp_date" value="${form.last_visit }"/>
+	<span style="color: red; font-weight: 900">${errors.last_visit }</span>
 	<br/>
-	Phone	    ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	
+	Patient ID ：<input type="text" name="patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
-	Gender	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Age	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	ID	        ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Address	    ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Username	    ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Password	    ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Conditions	    ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Last Visit	    ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
+	
+	
 	
 	
 	
