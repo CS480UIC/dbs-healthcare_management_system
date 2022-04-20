@@ -353,6 +353,48 @@
   </servlet-mapping>
   
   
+  <servlet>
+    <description></description>
+    <display-name>Patient_medical_history_surgeriesServletCreate</display-name>
+    <servlet-name>Patient_medical_history_surgeriesServletCreate</servlet-name>
+    <servlet-class>patient_medical_history_surgeries.web.servlet.Patient_medical_history_surgeriesServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Patient_medical_history_surgeriesServletCreate</servlet-name>
+    <url-pattern>/Patient_medical_history_surgeriesServletCreate</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Patient_medical_history_surgeriesServletRead</display-name>
+    <servlet-name>Patient_medical_history_surgeriesServletRead</servlet-name>
+    <servlet-class>patient_medical_history_surgeries.web.servlet.Patient_medical_history_surgeriesServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Patient_medical_history_surgeriesServletRead</servlet-name>
+    <url-pattern>/Patient_medical_history_surgeriesServletRead</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>Patient_medical_history_surgeriesServletDelete</display-name>
+    <servlet-name>Patient_medical_history_surgeriesServletDelete</servlet-name>
+    <servlet-class>patient_medical_history_surgeries.web.servlet.Patient_medical_history_surgeriesServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Patient_medical_history_surgeriesServletDelete</servlet-name>
+    <url-pattern>/Patient_medical_history_surgeriesServletDelete</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Patient_medical_history_surgeriesServletUpdate</display-name>
+    <servlet-name>Patient_medical_history_surgeriesServletUpdate</servlet-name>
+    <servlet-class>patient_medical_history_surgeries.web.servlet.Patient_medical_history_surgeriesServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Patient_medical_history_surgeriesServletUpdate</servlet-name>
+    <url-pattern>/Patient_medical_history_surgeriesServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
   
   
   
