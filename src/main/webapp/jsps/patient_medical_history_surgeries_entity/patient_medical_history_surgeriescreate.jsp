@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Patient Surgeries</title>
+    <title>Patient Medical History Surgeries Entity Create</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,20 +21,22 @@
   </head>
   
   <body>
-  <h1>Read Patient Surgeries</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Patient_medical_history_surgeriesServletRead'/>" method="post">
-	<input type="hidden" name="method" value="regist"/>
-	Read Patient Surgeries  :<input type="integer" name="username" value="${form.history_id }"/>
+  <h1>Patient Medical History Surgeries Entity Create</h1>
+<form action="<c:url value='/Patient_medical_history_surgeriesServletCreate'/>" method="post">
+	History ID	    ：<input type="text" name="integer" value="${form.history_id }"/>
 	<span style="color: red; font-weight: 900">${errors.history_id }</span>
 	<br/>
-<%-- 	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	
+	Surgeries	    ：<input type="integer" name="email" value="${form.surgeries }"/>
+	<span style="color: red; font-weight: 900">${errors.surgeries }</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/> --%>
-	<input type="submit" value="Read Patient Surgeries"/>
+	
+	
+	
+	
+	
+	<input type="submit" value="Create Patient Medical History Surgeries"/>
+	
 </form>
   </body>
 </html>

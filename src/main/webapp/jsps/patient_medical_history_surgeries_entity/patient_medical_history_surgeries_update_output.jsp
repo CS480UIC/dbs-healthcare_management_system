@@ -21,20 +21,33 @@
   </head>
   
   <body>
-  <h1>Delete Entity</h1>
+  <h1>Update Entity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Patient_medical_history_surgeriesServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="history_id" value="${patient_medical_history_surgeries.history_id   }"/>
-	 History ID	        ：<input type="text" name="medicine_id" value="${patient_medical_history_surgeries.history_id }"/>
+<form>
+	History ID	：<input type="text" name="medicine_id" value="${patient_medical_history_surgeries.history_id }"/>
 	<span style="color: red; font-weight: 900">${errors.history_id }</span>
 	<br/>
 	
 	
-	Surgeries ：<input type="text" name="surgeries" value="${patient_medical_history_surgeries.surgeries }"/>
+	Surgeries  ：<input type="text" name="patient_id" value="${patient_medical_history_surgeries.surgeries }"/>
 	<span style="color: red; font-weight: 900">${errors.surgeries }</span>
 	<br/>
-	<input type="submit" value="Delete Patient_medical_history_surgeries"/>
+	
+</form>
+<h1>Update the values below</h1>
+<form action="<c:url value='/Patient_medical_history_surgeriesServletUpdate'/>" method="post">
+		<input type="hidden" name="method" value="update"/>
+				<input type="hidden" name="history_id" value="${patient_medical_history_surgeries.history_id  }"/>
+		<br/>
+	
+
+	
+	
+	Surgeries ：<input type="text" name="patient_id" value="${patient_medical_history_surgeries.surgeries }"/>
+	<span style="color: red; font-weight: 900">${errors.surgeries }</span>
+	<br/>
+	
+	<input type="submit" value="Update Patient_medical_history_surgeries"/>
 </form>
 
 </body>
