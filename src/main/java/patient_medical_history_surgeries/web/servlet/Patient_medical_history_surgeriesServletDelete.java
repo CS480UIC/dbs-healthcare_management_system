@@ -41,7 +41,7 @@ public class Patient_medical_history_surgeriesServletDelete extends HttpServlet 
 		if(method.equals("search"))
 		{
 			try {
-				patient_medical_history_surgeries = patient_medical_history_surgeriesDao.findByMID(Integer.parseInt(request.getParameter("history_id")));
+				patient_medical_history_surgeries = patient_medical_history_surgeriesDao.findByMID(Integer.parseInt(request.getParameter("history_id")), Integer.parseInt(request.getParameter("surgeries")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -50,7 +50,7 @@ public class Patient_medical_history_surgeriesServletDelete extends HttpServlet 
 				e1.printStackTrace();
 			}
 		
-			if(patient_medical_history_surgeries.getHistory_id()!=null){
+			if(patient_medical_history_surgeries.getHistory_id()!=null && patient_medical_history_surgeries.getSurgeries()!=null){
 						
 						request.setAttribute("patient_medical_history_surgeries", patient_medical_history_surgeries);
 						request.getRequestDispatcher("/jsps/patient_medical_history_surgeries_entity/patient_medical_history_surgeries_delete_output.jsp").forward(request, response);			
@@ -63,7 +63,7 @@ public class Patient_medical_history_surgeriesServletDelete extends HttpServlet 
 		else if(method.equals("delete"))
 		{	
 			try {
-				patient_medical_history_surgeriesDao.delete(Integer.parseInt(request.getParameter("history_id")));
+				patient_medical_history_surgeriesDao.delete(Integer.parseInt(request.getParameter("history_id")), Integer.parseInt(request.getParameter("surgeries")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {

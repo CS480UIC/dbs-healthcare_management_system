@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import patient_medical_history_surgeries.dao.Patient_medical_history_surgeriesDao;
 import patient_medical_history_surgeries.domain.Patient_medical_history_surgeries;
+import patient_medical_history_surgeries.service.*;
 
 /**
  * Servlet implementation class UserServlet
@@ -47,7 +48,7 @@ public class Patient_medical_history_surgeriesServletUpdate extends HttpServlet 
 		if(method.equals("search"))
 		{
 			try {
-				patient_medical_history_surgeries = patient_medical_history_surgeriesdao.findByMID(Integer.parseInt(request.getParameter("history_id")));
+				patient_medical_history_surgeries = patient_medical_history_surgeriesdao.findByMID(Integer.parseInt(request.getParameter("history_id")), Integer.parseInt(request.getParameter("surgeries")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -56,7 +57,7 @@ public class Patient_medical_history_surgeriesServletUpdate extends HttpServlet 
 				e1.printStackTrace();
 			}
 
-			if(patient_medical_history_surgeries.getHistory_id()!=null){
+			if(patient_medical_history_surgeries.getHistory_id()!=null && patient_medical_history_surgeries.getSurgeries()!=null){
 				request.setAttribute("patient_medical_history_surgeries", patient_medical_history_surgeries);
 				request.getRequestDispatcher("/jsps/patient_medical_history_surgeries_entity/patient_medical_history_surgeries_update_output.jsp").forward(request, response);
 
@@ -64,6 +65,15 @@ public class Patient_medical_history_surgeriesServletUpdate extends HttpServlet 
 			else{
 				request.setAttribute("msg", "Payment not found");
 				request.getRequestDispatcher("/jsps/patient_medical_history_surgeries_entity/patient_medical_history_surgeries_read_output.jsp").forward(request, response);
+			}
+			try {
+				patient_medical_history_surgeriesdao.delete(patient_medical_history_surgeries.getHistory_id(), patient_medical_history_surgeries.getSurgeries());
+			} catch (ClassNotFoundException e1) {
+				e1.printStackTrace();
+			} catch (InstantiationException e1) {
+				e1.printStackTrace();
+			} catch (IllegalAccessException e1) {
+				e1.printStackTrace();
 			}
 		}
 		else if(method.equals("update"))
@@ -81,11 +91,12 @@ public class Patient_medical_history_surgeriesServletUpdate extends HttpServlet 
 			form.setHistory_id(Integer.parseInt(info.get(1)));
 			
 			form.setSurgeries(Integer.parseInt(info.get(2)));
-
+			Patient_medical_history_surgeriesService entity1service = new Patient_medical_history_surgeriesService();
+			
 			try {
-				patient_medical_history_surgeriesdao.update(form);
+				entity1service.create(form);
 
-			} catch (ClassNotFoundException e1) {
+			} catch (ClassNotFoundException | Patient_medical_history_surgeriesException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
 				e1.printStackTrace();
