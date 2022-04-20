@@ -44,7 +44,7 @@ public class HospitalDao {
 		    	System.out.print(hospital_id);
 		    	System.out.print(h_id);
 		    	if(hospital_id.equals(h_id)){
-		    		System.out.print("hiiiiiiiii");
+		    		//System.out.print("hiiiiiiiii");
 		    		hospital.setHospital_id(hospital_id);
 		    		hospital.setName(resultSet.getString("name"));
 		    		hospital.setAddress(resultSet.getString("address"));
@@ -111,6 +111,7 @@ public class HospitalDao {
 		    preparestatement.setString(3,form.getContact_no());
 		    preparestatement.setString(4,form.getEmail());
 		    preparestatement.setInt(5,form.getEmployee_count());
+		    preparestatement.setInt(6,form.getHospital_id());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
