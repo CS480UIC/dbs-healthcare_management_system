@@ -22,7 +22,7 @@
   
   <body>
   <h1>Update Patient Medical History</h1>
-<form action="<c:url value='/Patient_medical_historyServletUpdate'/>" method="post">
+<form action="<c:url value='/PatientMedicalHistoryServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Update Patient Medical History   :<input type="text" name="history_id" value="${form.history_id }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>

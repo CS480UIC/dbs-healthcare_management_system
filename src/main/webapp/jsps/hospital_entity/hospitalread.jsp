@@ -25,7 +25,7 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/HospitalServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	 Hospital   :<input type="text" name="username" value="${form.hospital_id }"/>
+	 Hospital   :<input type="text" name="hospital_id" value="${form.hospital_id }"/>
 	<span style="color: red; font-weight: 900">${errors.hospital_id }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>

@@ -41,7 +41,7 @@ public class PatientMedicalHistorySurgeriesServletDelete extends HttpServlet {
 		if(method.equals("search"))
 		{
 			try {
-				patient_medical_history_surgeries = patient_medical_history_surgeriesDao.findByMID(Integer.parseInt(request.getParameter("history_id")), Integer.parseInt(request.getParameter("surgeries")));
+				patient_medical_history_surgeries = patient_medical_history_surgeriesDao.findByMID(Integer.parseInt(request.getParameter("history_id")), (request.getParameter("surgeries")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -63,7 +63,7 @@ public class PatientMedicalHistorySurgeriesServletDelete extends HttpServlet {
 		else if(method.equals("delete"))
 		{	
 			try {
-				patient_medical_history_surgeriesDao.delete(Integer.parseInt(request.getParameter("history_id")), Integer.parseInt(request.getParameter("surgeries")));
+				patient_medical_history_surgeriesDao.delete(Integer.parseInt(request.getParameter("history_id")), (request.getParameter("surgeries")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {

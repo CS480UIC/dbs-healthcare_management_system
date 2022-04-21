@@ -22,7 +22,7 @@
   
   <body>
   <h1>Update Patient Medical History Surgeries</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/PatientMedicalHistorySurgeriesServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	
 	Update History Id   :<input type="text" name="history_id" value="${form.history_id }"/>

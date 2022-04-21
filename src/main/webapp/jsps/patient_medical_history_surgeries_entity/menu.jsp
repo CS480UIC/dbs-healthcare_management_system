@@ -24,10 +24,10 @@
   <body>
     <h1>CRUD operations for Patient Surgeries Entity </h1>
     <br>
-	<a href="<c:url value='/jsps/patient_surgeries_entity/patient_surgeriescreate.jsp'/>" target="_parent">Create Patient Surgeries Entity</a> |&nbsp; 
-	<a href="<c:url value='/jsps/patient_surgeries_entity/patient_surgeriesread.jsp'/>" target="_parent">Read Patient Surgeries Entity</a> |&nbsp;
-	<a href="<c:url value='/jsps/patient_surgeries_entity/patient_surgeriesupdate.jsp'/>" target="_parent">Update Patient Surgeries Entity</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/patient_surgeries_entity/patient_surgeriesdelete.jsp'/>" target="_parent">Delete Patient Surgeries Entity</a>	
+	<a href="<c:url value='/jsps/patient_medical_history_surgeries_entity/patient_medical_history_surgeriescreate.jsp'/>" target="_parent">Create Patient Surgeries Entity</a> |&nbsp; 
+	<a href="<c:url value='/jsps/patient_medical_history_surgeries_entity/patient_medical_history_surgeriesread.jsp'/>" target="_parent">Read Patient Surgeries Entity</a> |&nbsp;
+	<a href="<c:url value='/jsps/patient_medical_history_surgeries_entity/patient_medical_history_surgeriesupdate.jsp'/>" target="_parent">Update Patient Surgeries Entity</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/patient_medical_history_surgeries_entity/patient_medical_history_surgeriesdelete.jsp'/>" target="_parent">Delete Patient Surgeries Entity</a>	
 	    
   </body>
 </html>

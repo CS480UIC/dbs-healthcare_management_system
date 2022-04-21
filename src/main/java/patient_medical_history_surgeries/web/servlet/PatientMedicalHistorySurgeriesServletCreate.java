@@ -56,7 +56,7 @@ public class PatientMedicalHistorySurgeriesServletCreate extends HttpServlet {
 		 
 		form.setHistory_id(Integer.parseInt(info.get(0)));
 		
-		form.setSurgeries(Integer.parseInt(info.get(1)));
+		form.setSurgeries((info.get(1)));
 		
 		try {
 			paymentservice.create(form);

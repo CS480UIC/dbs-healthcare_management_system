@@ -51,7 +51,7 @@
             <a href="<c:url value='/jsps/insurance_entity/menu.jsp'/>" target="body">Insurance Entity </a> |&nbsp;&nbsp;
 		    <a href="<c:url value='/jsps/patient_medication_entity/menu.jsp'/>" target="body">Patient Medication Entity </a> |&nbsp;&nbsp;
 		    <a href="<c:url value='/jsps/patient_entity/menu.jsp'/>" target="body">Patient Entity </a> |&nbsp;&nbsp;
-            <a href="<c:url value='/jsps/patient_surgeries_entity/menu.jsp'/>" target="body">Patient Surgeries Entity </a> |&nbsp;&nbsp;
+            <a href="<c:url value='/jsps/patient_medical_history_surgeries_entity/menu.jsp'/>" target="body">Patient Surgeries Entity </a> |&nbsp;&nbsp;
 		    <a href="<c:url value='/jsps/patient_medical_history_entity/menu.jsp'/>" target="body">Patient Medical History Entity </a> |&nbsp;&nbsp;
 		</c:otherwise>
 	</c:choose>

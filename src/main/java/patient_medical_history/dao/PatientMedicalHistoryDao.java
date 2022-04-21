@@ -35,7 +35,7 @@ public class PatientMedicalHistoryDao {//PatientMedicalHistoryDao
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hospital_database", MySQL_user, MySQL_password);
-		    String sql = "select * from patient_medical_history where medicine_id=?";
+		    String sql = "select * from patient_medical_history where history_id=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,pm_id);
 		    ResultSet resultSet = preparestatement.executeQuery();

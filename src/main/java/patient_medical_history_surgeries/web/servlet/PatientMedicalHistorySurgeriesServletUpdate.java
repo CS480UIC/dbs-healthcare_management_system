@@ -48,7 +48,7 @@ public class PatientMedicalHistorySurgeriesServletUpdate extends HttpServlet {
 		if(method.equals("search"))
 		{
 			try {
-				patient_medical_history_surgeries = patient_medical_history_surgeriesdao.findByMID(Integer.parseInt(request.getParameter("history_id")), Integer.parseInt(request.getParameter("surgeries")));
+				patient_medical_history_surgeries = patient_medical_history_surgeriesdao.findByMID(Integer.parseInt(request.getParameter("history_id")), (request.getParameter("surgeries")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -90,7 +90,7 @@ public class PatientMedicalHistorySurgeriesServletUpdate extends HttpServlet {
 			
 			form.setHistory_id(Integer.parseInt(info.get(1)));
 			
-			form.setSurgeries(Integer.parseInt(info.get(2)));
+			form.setSurgeries((info.get(2)));
 			PatientMedicalHistorySurgeriesService entity1service = new PatientMedicalHistorySurgeriesService();
 			
 			try {

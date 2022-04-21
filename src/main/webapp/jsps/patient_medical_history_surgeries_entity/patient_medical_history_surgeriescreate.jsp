@@ -22,12 +22,12 @@
   
   <body>
   <h1>Patient Medical History Surgeries Entity Create</h1>
-<form action="<c:url value='/Patient_medical_history_surgeriesServletCreate'/>" method="post">
-	History ID	    ：<input type="text" name="integer" value="${form.history_id }"/>
+<form action="<c:url value='/PatientMedicalHistorySurgeriesServletCreate'/>" method="post">
+	History ID	    ：<input type="text" name="history_id" value="${form.history_id }"/>
 	<span style="color: red; font-weight: 900">${errors.history_id }</span>
 	<br/>
 	
-	Surgeries	    ：<input type="integer" name="email" value="${form.surgeries }"/>
+	Surgeries	    ：<input type="text" name="surgeries" value="${form.surgeries }"/>
 	<span style="color: red; font-weight: 900">${errors.surgeries }</span>
 	<br/>
 	

@@ -23,7 +23,7 @@
   <body>
   <h1>Delete Entity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Patient_medical_history_surgeriesServletDelete'/>" method="post">
+<form action="<c:url value='/PatientMedicalHistorySurgeriesServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
 		<input type="hidden" name="history_id" value="${patient_medical_history_surgeries.history_id   }"/>
 		<input type="hidden" name="surgeries" value="${patient_medical_history_surgeries.surgeries   }"/>

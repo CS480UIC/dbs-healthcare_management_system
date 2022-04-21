@@ -42,7 +42,7 @@ public class PatientMedicalHistorySurgeriesServletRead extends HttpServlet {
 		
 		try {
 			
-			patient_medical_history_surgeries = patient_medical_history_surgeriesDao.findByMID(Integer.parseInt(request.getParameter("history_id")), Integer.parseInt(request.getParameter("surgeries")));
+			patient_medical_history_surgeries = patient_medical_history_surgeriesDao.findByMID(Integer.parseInt(request.getParameter("history_id")), (request.getParameter("surgeries")));
 			
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
@@ -53,7 +53,8 @@ public class PatientMedicalHistorySurgeriesServletRead extends HttpServlet {
 		}
 		
 		if(patient_medical_history_surgeries.getHistory_id()!=null && patient_medical_history_surgeries.getSurgeries()!=null){
-					System.out.println(patient_medical_history_surgeries);
+					System.out.println(patient_medical_history_surgeries.getHistory_id());
+					System.out.println(patient_medical_history_surgeries.getSurgeries());
 					request.setAttribute("patient_medical_history_surgeries", patient_medical_history_surgeries);
 					request.getRequestDispatcher("/jsps/patient_medical_history_surgeries_entity/patient_medical_history_surgeries_read_output.jsp").forward(request, response);
 			}
