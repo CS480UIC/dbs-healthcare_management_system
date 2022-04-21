@@ -396,6 +396,50 @@
   
   
   
+  <servlet>
+    <description></description>
+    <display-name>PatientMedicalHistoryMedicationServletCreate</display-name>
+    <servlet-name>PatientMedicalHistoryMedicationServletCreate</servlet-name>
+    <servlet-class>patient_medical_history_medication.web.servlet.PatientMedicalHistoryMedicationServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientMedicalHistoryMedicationServletCreate</servlet-name>
+    <url-pattern>/PatientMedicalHistoryMedicationServletCreate</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PatientMedicalHistoryMedicationServletRead</display-name>
+    <servlet-name>PatientMedicalHistoryMedicationServletRead</servlet-name>
+    <servlet-class>patient_medical_history_medication.web.servlet.PatientMedicalHistoryMedicationServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientMedicalHistoryMedicationServletRead</servlet-name>
+    <url-pattern>/PatientMedicalHistoryMedicationServletRead</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>PatientMedicalHistoryMedicationServletDelete</display-name>
+    <servlet-name>PatientMedicalHistoryMedicationServletDelete</servlet-name>
+    <servlet-class>patient_medical_history_medication.web.servlet.PatientMedicalHistoryMedicationServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientMedicalHistoryMedicationServletDelete</servlet-name>
+    <url-pattern>/PatientMedicalHistoryMedicationServletDelete</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PatientMedicalHistoryMedicationServletUpdate</display-name>
+    <servlet-name>PatientMedicalHistoryMedicationServletUpdate</servlet-name>
+    <servlet-class>patient_medical_history_medication.web.servlet.PatientMedicalHistoryMedicationServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientMedicalHistoryMedicationServletUpdate</servlet-name>
+    <url-pattern>/PatientMedicalHistoryMedicationServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
   
   
   <servlet>
