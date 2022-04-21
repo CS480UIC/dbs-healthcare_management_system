@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Patient Medication Entity Create</title>
+    <title>Patient Medical History Medication Entity Create</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,22 +21,21 @@
   </head>
   
   <body>
-  <h1>Patient Medication Entity Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	Medication  :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+  <h1>Patient Medical History Medication Entity Create</h1>
+<form action="<c:url value='/PatientMedicalHistoryMedicationServletCreate'/>" method="post">
+	History ID	    ：<input type="text" name="history_id" value="${form.history_id }"/>
+	<span style="color: red; font-weight: 900">${errors.history_id }</span>
+	<br/>
+	
+	Medication	    ：<input type="text" name="medication" value="${form.medication }"/>
+	<span style="color: red; font-weight: 900">${errors.medication }</span>
 	<br/>
 	
 	
-	ID	        ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
 	
 	
 	
-	
-	
-	<input type="submit" value="Create Patient Medication"/>
+	<input type="submit" value="Create Patient Medical History Medication"/>
 	
 </form>
   </body>

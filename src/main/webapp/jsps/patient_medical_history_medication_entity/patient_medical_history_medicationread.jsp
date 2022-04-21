@@ -21,12 +21,16 @@
   </head>
   
   <body>
-  <h1>Read Patient Medication</h1>
+  <h1>Read Patient Medical History Medication</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/PatientMedicalHistoryMedicationServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	 Patient Medication   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Read History ID  :<input type="integer" name="history_id" value="${form.history_id }"/>
+	<span style="color: red; font-weight: 900">${errors.history_id }</span>
+	<br/>
+	
+	Read Patient Medication  :<input type="integer" name="medication" value="${form.medication }"/>
+	<span style="color: red; font-weight: 900">${errors.medication }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
@@ -34,7 +38,7 @@
 	Email	：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/> --%>
-	<input type="submit" value="Read Patient Medication"/>
+	<input type="submit" value="Read Patient Medical History Medication"/>
 </form>
   </body>
 </html>

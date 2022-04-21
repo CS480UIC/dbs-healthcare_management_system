@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Patient Medication</title>
+    <title>Update Patient Medication</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,18 @@
   </head>
   
   <body>
-  <h1>Delete Patient Medication</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+  <h1>Update Patient Medical History Medication</h1>
+<form action="<c:url value='/PatientMedicalHistoryMedicationServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Patient Medication   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	
+	Update History Id   :<input type="text" name="history_id" value="${form.history_id }"/>
+	<span style="color: red; font-weight: 900">${errors.history_id }</span>
 	<br/>
-	<input type="submit" value="Delete Patient Medication "/>
+	
+	Update Read Patient Medication   :<input type="text" name="medication" value="${form.medication }"/>
+	<span style="color: red; font-weight: 900">${errors.medication }</span>
+	<br/>
+	<input type="submit" value="Update Patient Medical History Medication"/>
 </form>
   </body>
 </html>
