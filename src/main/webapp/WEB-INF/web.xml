@@ -267,6 +267,51 @@
   
   
   
+   
+  <servlet>
+    <description></description>
+    <display-name>InsuranceServletCreate</display-name>
+    <servlet-name>InsuranceServletCreate</servlet-name>
+    <servlet-class>insurance.web.servlet.InsuranceServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InsuranceServletCreate</servlet-name>
+    <url-pattern>/InsuranceServletCreate</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>InsuranceServletRead</display-name>
+    <servlet-name>InsuranceServletRead</servlet-name>
+    <servlet-class>insurance.web.servlet.InsuranceServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InsuranceServletRead</servlet-name>
+    <url-pattern>/InsuranceServletRead</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>InsuranceServletDelete</display-name>
+    <servlet-name>InsuranceServletDelete</servlet-name>
+    <servlet-class>insurance.web.servlet.InsuranceServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InsuranceServletDelete</servlet-name>
+    <url-pattern>/InsuranceServletDelete</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>InsuranceServletUpdate</display-name>
+    <servlet-name>InsuranceServletUpdate</servlet-name>
+    <servlet-class>insurance.web.servlet.InsuranceServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InsuranceServletUpdate</servlet-name>
+    <url-pattern>/InsuranceServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
   
   
   <servlet>
