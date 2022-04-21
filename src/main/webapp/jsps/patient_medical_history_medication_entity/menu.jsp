@@ -24,10 +24,10 @@
   <body>
     <h1>CRUD operations for Patient Medication Entity </h1>
     <br>
-	<a href="<c:url value='/jsps/patient_medication_entity/patient_medicationcreate.jsp'/>" target="_parent">Create Patient Medication Entity</a> |&nbsp; 
-	<a href="<c:url value='/jsps/patient_medication_entity/patient_medicationread.jsp'/>" target="_parent">Read Patient Medication Entity</a> |&nbsp;
-	<a href="<c:url value='/jsps/patient_medication_entity/patient_medicationupdate.jsp'/>" target="_parent">Update Patient Medication Entity</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/patient_medication_entity/patient_medicationdelete.jsp'/>" target="_parent">Delete Patient Medication Entity</a>	
-	    
+	<a href="<c:url value='/jsps/patient_medical_history_medication_entity/patient_medical_history_medicationcreate.jsp'/>" target="_parent">Create Patient Medication Entity</a> |&nbsp; 
+	<a href="<c:url value='/jsps/patient_medical_history_medication_entity/patient_medical_history_medicationread.jsp'/>" target="_parent">Read Patient Medication Entity</a> |&nbsp;
+	<a href="<c:url value='/jsps/patient_medical_history_medication_entity/patient_medical_history_medicationupdate.jsp'/>" target="_parent">Update Patient Medication Entity</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/patient_medical_history_medication_entity/patient_medical_history_medicationdelete.jsp'/>" target="_parent">Delete Patient Medication Entity</a>	
+	     
   </body>
 </html>
