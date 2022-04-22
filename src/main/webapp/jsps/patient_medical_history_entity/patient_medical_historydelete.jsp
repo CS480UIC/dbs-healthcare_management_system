@@ -22,9 +22,9 @@
   
   <body>
   <h1>Delete Patient Medical History</h1>
-<form action="<c:url value='/Patient_medical_historyServletDelete'/>" method="post">
+<form action="<c:url value='/PatientMedicalHistoryServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Patient Medical History   :<input type="text" name="username" value="${form.history_id }"/>
+	Delete Patient Medical History   :<input type="text" name="history_id" value="${form.history_id }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
 	<input type="submit" value="Delete Patient Medical History "/>

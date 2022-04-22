@@ -23,13 +23,13 @@
   <body>
   <h1>Read Patient Medical History Surgeries</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Patient_medical_history_surgeriesServletRead'/>" method="post">
+<form action="<c:url value='/PatientMedicalHistorySurgeriesServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	Read History ID  :<input type="integer" name="username" value="${form.history_id }"/>
+	Read History ID  :<input type="integer" name="history_id" value="${form.history_id }"/>
 	<span style="color: red; font-weight: 900">${errors.history_id }</span>
 	<br/>
 	
-	Read Patient Surgeries  :<input type="integer" name="username" value="${form.surgeries }"/>
+	Read Patient Surgeries  :<input type="integer" name="surgeries" value="${form.surgeries }"/>
 	<span style="color: red; font-weight: 900">${errors.surgeries }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>

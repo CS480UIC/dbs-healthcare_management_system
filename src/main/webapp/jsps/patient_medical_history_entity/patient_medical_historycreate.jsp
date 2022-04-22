@@ -22,7 +22,7 @@
   
   <body>
   <h1>Patient Medical History Entity Create</h1>
-<form action="<c:url value='/Patient_medical_historyServletCreate'/>" method="post">
+<form action="<c:url value='/PatientMedicalHistoryServletCreate'/>" method="post">
 
 	History ID	        ：<input type="text" name="history_id" value="${form.history_id }"/>
 	<span style="color: red; font-weight: 900">${errors.history_id }</span>

@@ -267,6 +267,51 @@
   
   
   
+   
+  <servlet>
+    <description></description>
+    <display-name>InsuranceServletCreate</display-name>
+    <servlet-name>InsuranceServletCreate</servlet-name>
+    <servlet-class>insurance.web.servlet.InsuranceServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InsuranceServletCreate</servlet-name>
+    <url-pattern>/InsuranceServletCreate</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>InsuranceServletRead</display-name>
+    <servlet-name>InsuranceServletRead</servlet-name>
+    <servlet-class>insurance.web.servlet.InsuranceServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InsuranceServletRead</servlet-name>
+    <url-pattern>/InsuranceServletRead</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>InsuranceServletDelete</display-name>
+    <servlet-name>InsuranceServletDelete</servlet-name>
+    <servlet-class>insurance.web.servlet.InsuranceServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InsuranceServletDelete</servlet-name>
+    <url-pattern>/InsuranceServletDelete</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>InsuranceServletUpdate</display-name>
+    <servlet-name>InsuranceServletUpdate</servlet-name>
+    <servlet-class>insurance.web.servlet.InsuranceServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InsuranceServletUpdate</servlet-name>
+    <url-pattern>/InsuranceServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
   
   
   <servlet>
@@ -313,86 +358,130 @@
   
   <servlet>
     <description></description>
-    <display-name>Patient_medical_historyServletCreate</display-name>
-    <servlet-name>Patient_medical_historyServletCreate</servlet-name>
-    <servlet-class>patient_medical_history.web.servlet.Patient_medical_historyServletCreate</servlet-class>
+    <display-name>PatientMedicalHistoryServletCreate</display-name>
+    <servlet-name>PatientMedicalHistoryServletCreate</servlet-name>
+    <servlet-class>patient_medical_history.web.servlet.PatientMedicalHistoryServletCreate</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Patient_medical_historyServletCreate</servlet-name>
-    <url-pattern>/Patient_medical_historyServletCreate</url-pattern>
+    <servlet-name>PatientMedicalHistoryServletCreate</servlet-name>
+    <url-pattern>/PatientMedicalHistoryServletCreate</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>Patient_medical_historyServletRead</display-name>
-    <servlet-name>Patient_medical_historyServletRead</servlet-name>
-    <servlet-class>patient_medical_history.web.servlet.Patient_medical_historyServletRead</servlet-class>
+    <display-name>PatientMedicalHistoryServletRead</display-name>
+    <servlet-name>PatientMedicalHistoryServletRead</servlet-name>
+    <servlet-class>patient_medical_history.web.servlet.PatientMedicalHistoryServletRead</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Patient_medical_historyServletRead</servlet-name>
-    <url-pattern>/Patient_medical_historyServletRead</url-pattern>
+    <servlet-name>PatientMedicalHistoryServletRead</servlet-name>
+    <url-pattern>/PatientMedicalHistoryServletRead</url-pattern>
   </servlet-mapping>
    <servlet>
     <description></description>
-    <display-name>Patient_medical_historyServletDelete</display-name>
-    <servlet-name>Patient_medical_historyServletDelete</servlet-name>
-    <servlet-class>patient_medical_history.web.servlet.Patient_medical_historyServletDelete</servlet-class>
+    <display-name>PatientMedicalHistoryServletDelete</display-name>
+    <servlet-name>PatientMedicalHistoryServletDelete</servlet-name>
+    <servlet-class>patient_medical_history.web.servlet.PatientMedicalHistoryServletDelete</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Patient_medical_historyServletDelete</servlet-name>
-    <url-pattern>/Patient_medical_historyServletDelete</url-pattern>
+    <servlet-name>PatientMedicalHistoryServletDelete</servlet-name>
+    <url-pattern>/PatientMedicalHistoryServletDelete</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>Patient_medical_historyServletUpdate</display-name>
-    <servlet-name>Patient_medical_historyServletUpdate</servlet-name>
-    <servlet-class>patient_medical_history.web.servlet.Patient_medical_historyServletUpdate</servlet-class>
+    <display-name>PatientMedicalHistoryServletUpdate</display-name>
+    <servlet-name>PatientMedicalHistoryServletUpdate</servlet-name>
+    <servlet-class>patient_medical_history.web.servlet.PatientMedicalHistoryServletUpdate</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Patient_medical_historyServletUpdate</servlet-name>
-    <url-pattern>/Patient_medical_historyServletUpdate</url-pattern>
+    <servlet-name>PatientMedicalHistoryServletUpdate</servlet-name>
+    <url-pattern>/PatientMedicalHistoryServletUpdate</url-pattern>
   </servlet-mapping>
   
   
   <servlet>
     <description></description>
-    <display-name>Patient_medical_history_surgeriesServletCreate</display-name>
-    <servlet-name>Patient_medical_history_surgeriesServletCreate</servlet-name>
-    <servlet-class>patient_medical_history_surgeries.web.servlet.Patient_medical_history_surgeriesServletCreate</servlet-class>
+    <display-name>PatientMedicalHistorySurgeriesServletCreate</display-name>
+    <servlet-name>PatientMedicalHistorySurgeriesServletCreate</servlet-name>
+    <servlet-class>patient_medical_history_surgeries.web.servlet.PatientMedicalHistorySurgeriesServletCreate</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Patient_medical_history_surgeriesServletCreate</servlet-name>
-    <url-pattern>/Patient_medical_history_surgeriesServletCreate</url-pattern>
+    <servlet-name>PatientMedicalHistorySurgeriesServletCreate</servlet-name>
+    <url-pattern>/PatientMedicalHistorySurgeriesServletCreate</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>Patient_medical_history_surgeriesServletRead</display-name>
-    <servlet-name>Patient_medical_history_surgeriesServletRead</servlet-name>
-    <servlet-class>patient_medical_history_surgeries.web.servlet.Patient_medical_history_surgeriesServletRead</servlet-class>
+    <display-name>PatientMedicalHistorySurgeriesServletRead</display-name>
+    <servlet-name>PatientMedicalHistorySurgeriesServletRead</servlet-name>
+    <servlet-class>patient_medical_history_surgeries.web.servlet.PatientMedicalHistorySurgeriesServletRead</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Patient_medical_history_surgeriesServletRead</servlet-name>
-    <url-pattern>/Patient_medical_history_surgeriesServletRead</url-pattern>
+    <servlet-name>PatientMedicalHistorySurgeriesServletRead</servlet-name>
+    <url-pattern>/PatientMedicalHistorySurgeriesServletRead</url-pattern>
   </servlet-mapping>
    <servlet>
     <description></description>
-    <display-name>Patient_medical_history_surgeriesServletDelete</display-name>
-    <servlet-name>Patient_medical_history_surgeriesServletDelete</servlet-name>
-    <servlet-class>patient_medical_history_surgeries.web.servlet.Patient_medical_history_surgeriesServletDelete</servlet-class>
+    <display-name>PatientMedicalHistorySurgeriesServletDelete</display-name>
+    <servlet-name>PatientMedicalHistorySurgeriesServletDelete</servlet-name>
+    <servlet-class>patient_medical_history_surgeries.web.servlet.PatientMedicalHistorySurgeriesServletDelete</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Patient_medical_history_surgeriesServletDelete</servlet-name>
-    <url-pattern>/Patient_medical_history_surgeriesServletDelete</url-pattern>
+    <servlet-name>PatientMedicalHistorySurgeriesServletDelete</servlet-name>
+    <url-pattern>/PatientMedicalHistorySurgeriesServletDelete</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>Patient_medical_history_surgeriesServletUpdate</display-name>
-    <servlet-name>Patient_medical_history_surgeriesServletUpdate</servlet-name>
-    <servlet-class>patient_medical_history_surgeries.web.servlet.Patient_medical_history_surgeriesServletUpdate</servlet-class>
+    <display-name>PatientMedicalHistorySurgeriesServletUpdate</display-name>
+    <servlet-name>PatientMedicalHistorySurgeriesServletUpdate</servlet-name>
+    <servlet-class>patient_medical_history_surgeries.web.servlet.PatientMedicalHistorySurgeriesServletUpdate</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Patient_medical_history_surgeriesServletUpdate</servlet-name>
-    <url-pattern>/Patient_medical_history_surgeriesServletUpdate</url-pattern>
+    <servlet-name>PatientMedicalHistorySurgeriesServletUpdate</servlet-name>
+    <url-pattern>/PatientMedicalHistorySurgeriesServletUpdate</url-pattern>
   </servlet-mapping>
+  
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>PatientMedicalHistoryMedicationServletCreate</display-name>
+    <servlet-name>PatientMedicalHistoryMedicationServletCreate</servlet-name>
+    <servlet-class>patient_medical_history_medication.web.servlet.PatientMedicalHistoryMedicationServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientMedicalHistoryMedicationServletCreate</servlet-name>
+    <url-pattern>/PatientMedicalHistoryMedicationServletCreate</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PatientMedicalHistoryMedicationServletRead</display-name>
+    <servlet-name>PatientMedicalHistoryMedicationServletRead</servlet-name>
+    <servlet-class>patient_medical_history_medication.web.servlet.PatientMedicalHistoryMedicationServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientMedicalHistoryMedicationServletRead</servlet-name>
+    <url-pattern>/PatientMedicalHistoryMedicationServletRead</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>PatientMedicalHistoryMedicationServletDelete</display-name>
+    <servlet-name>PatientMedicalHistoryMedicationServletDelete</servlet-name>
+    <servlet-class>patient_medical_history_medication.web.servlet.PatientMedicalHistoryMedicationServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientMedicalHistoryMedicationServletDelete</servlet-name>
+    <url-pattern>/PatientMedicalHistoryMedicationServletDelete</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PatientMedicalHistoryMedicationServletUpdate</display-name>
+    <servlet-name>PatientMedicalHistoryMedicationServletUpdate</servlet-name>
+    <servlet-class>patient_medical_history_medication.web.servlet.PatientMedicalHistoryMedicationServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientMedicalHistoryMedicationServletUpdate</servlet-name>
+    <url-pattern>/PatientMedicalHistoryMedicationServletUpdate</url-pattern>
+  </servlet-mapping>
+  
   
   
   

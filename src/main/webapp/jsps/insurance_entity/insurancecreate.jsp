@@ -22,23 +22,29 @@
   
   <body>
   <h1>Insurance Entity Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	Insurance Company  :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/InsuranceServletCreate'/>" method="post">
+
+
+ 	Insurance ID  ：<input type="text" name="insurance_id" value="${form.insurance_id }"/>
+	<span style="color: red; font-weight: 900">${errors.insurance_id }</span>
 	<br/>
 	
-	Start Date       ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	End Date	    ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Insurance Plan	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Insurance Company  :<input type="text" name="insurance_company" value="${form.insurance_company }"/>
+	<span style="color: red; font-weight: 900">${errors.insurance_company }</span>
 	<br/>
 	
-	ID	        ：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Start Date       ：<input type="text" name="start_date" value="${form.start_date }"/>
+	<span style="color: red; font-weight: 900">${errors.start_date }</span>
+	<br/>
+	End Date	    ：<input type="text" name="end_date" value="${form.end_date }"/>
+	<span style="color: red; font-weight: 900">${errors.end_date }</span>
+	<br/>
+	Insurance Plan	：<input type="text" name="insurance_plan" value="${form.insurance_plan }"/>
+	<span style="color: red; font-weight: 900">${errors.insurance_plan }</span>
+	<br/>
+	
+	Patient ID ：<input type="text" name="patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
 	
 	

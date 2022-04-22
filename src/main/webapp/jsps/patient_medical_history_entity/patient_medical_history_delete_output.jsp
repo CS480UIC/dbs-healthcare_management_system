@@ -23,10 +23,10 @@
   <body>
   <h1>Delete Entity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Patient_medical_historyServletDelete'/>" method="post">
+<form action="<c:url value='/PatientMedicalHistoryServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
 		<input type="hidden" name="history_id" value="${patient_medical_history.history_id   }"/>
-	 History ID	        ：<input type="text" name="medicine_id" value="${patient_medical_history.history_id }"/>
+	 History ID	        ：<input type="text" name="history_id" value="${patient_medical_history.history_id }"/>
 	<span style="color: red; font-weight: 900">${errors.history_id }</span>
 	<br/>
 	Conditions  :<input type="text" name="conditions" value="${patient_medical_history.conditions }"/>
@@ -41,7 +41,7 @@
 	Patient ID ：<input type="text" name="patient_id" value="${patient_medical_history.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
-	<input type="submit" value="Delete Patient_medical_history"/>
+	<input type="submit" value="Delete PatientMedicalHistory"/>
 </form>
 
 </body>
