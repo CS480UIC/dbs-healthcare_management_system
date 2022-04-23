@@ -6,9 +6,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-
-
+import doctor.domain.Doctor;
 
 //import java.util.ArrayList;
 //import java.util.List;
@@ -54,6 +55,7 @@ public class MedicationDao {
 		    		medication.setMfg_company(resultSet.getString("mfg_company"));
 		    		medication.setDoctor_id(Integer.parseInt(resultSet.getString("doctor_id")));
 		    		medication.setPatient_id(Integer.parseInt(resultSet.getString("patient_id")));
+		    		
 		    		
 		    	
 		    	}
@@ -147,4 +149,26 @@ public class MedicationDao {
 			throw new RuntimeException(e);
 		}
 	}
+	
+	public List<Object> findTotalPrice() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hospital_database", MySQL_user, MySQL_password);
+			String sql = "select SUM(price) as TOTAL_PRICE from medication  where mfg_company='tcs'";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				
+				
+	    	
+	    		
+	    		list.add(resultSet.getString("TOTAL_PRICE"));
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+}
 }

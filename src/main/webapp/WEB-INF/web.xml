@@ -376,6 +376,18 @@
     <servlet-name>MedicationServletUpdate</servlet-name>
     <url-pattern>/MedicationServletUpdate</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>findTotalPrice</display-name>
+    <servlet-name>findTotalPrice</servlet-name>
+    <servlet-class>medication.web.servlet.findTotalPrice</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findTotalPrice</servlet-name>
+    <url-pattern>/findTotalPrice</url-pattern>
+  </servlet-mapping>
+   
+  
   
   
   <servlet>
