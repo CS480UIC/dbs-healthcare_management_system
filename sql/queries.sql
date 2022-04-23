@@ -58,11 +58,10 @@
 
 	
 
-	#View
-	CREATE VIEW view1 AS
-	SELECT P.patient_id, P.first_name
-	FROM patient P
-	INNER JOIN Doctor D ON D.doctor_id = P.doctor_id
+	CREATE OR REPLACE VIEW view1 AS
+	SELECT P.patient_id, P.first_name as patient_name, D.first_name as doctor_name
+	FROM hospital_database.patient P
+	INNER JOIN hospital_database.doctor D ON D.doctor_id = P.doctor_id
 	GROUP BY P.patient_id
 	ORDER BY P.first_name ASC;
 	
@@ -94,10 +93,13 @@
 
 	
 
-	CREATE VIEW view3 AS
-	select doctor_id from doctor d where  Exists 
-	(select hospital_id from hospital as h
+	CREATE OR REPLACE VIEW view3 AS
+	select doctor_id,h.name from hospital_database.doctor as d INNER JOIN hospital_database.hospital as h 
+    ON d.hospital_id=h.hospital_id
+    where d.hospital_id in 
+	(select hospital_id from hospital_database.hospital as h
 	 where h.employee_count>90);
 	
 
 	Select * from view3;
+    
