@@ -119,6 +119,17 @@
   </servlet-mapping>
   <servlet>
     <description></description>
+    <display-name>findDoctorsH</display-name>
+    <servlet-name>findDoctorsH</servlet-name>
+    
+    <servlet-class>doctor.web.servlet.findDoctorsH</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findDoctorsH</servlet-name>
+    <url-pattern>/findDoctorsH</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
     <display-name>findPatients</display-name>
     <servlet-name>findPatients</servlet-name>
     
@@ -127,6 +138,17 @@
   <servlet-mapping>
     <servlet-name>findPatients</servlet-name>
     <url-pattern>/findPatients</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>findPatientsD</display-name>
+    <servlet-name>findPatientsD</servlet-name>
+    
+    <servlet-class>patient.web.servlet.findPatientsD</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findPatientsD</servlet-name>
+    <url-pattern>/findPatientsD</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>

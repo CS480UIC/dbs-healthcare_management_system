@@ -32,5 +32,9 @@ public class PatientService {
 		return patientDao.findall();
 		
 	}
+	public List<Object> findallD() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return patientDao.findallD();
+		
+	}
 	
 }

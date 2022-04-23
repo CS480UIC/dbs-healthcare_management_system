@@ -12,6 +12,7 @@ import java.util.List;
 //import java.util.List;
 
 import doctor.domain.Doctor;
+import doctor.domain.DoctorHospital;
 
 
 /**
@@ -164,6 +165,38 @@ public class DoctorDao {
 			 }
 			connect.close();
 		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
+	public List<Object> findallH() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hospital_database", MySQL_user, MySQL_password);
+			String sql = "CREATE OR REPLACE VIEW view3 AS\n"
+					+ "	select doctor_id,h.name as hospital_name from hospital_database.doctor as d INNER JOIN hospital_database.hospital as h \n"
+					+ "    ON d.hospital_id=h.hospital_id\n"
+					+ "    where d.hospital_id in \n"
+					+ "	(select hospital_id from hospital_database.hospital as h\n"
+					+ "	 where h.employee_count>90);\n"
+					+ "	\n"
+					+ "\n";
+			PreparedStatement preparestatement = connect.prepareStatement(sql);
+			preparestatement.executeUpdate();
+			sql = "select * from view3";
+		    preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				DoctorHospital doctor = new DoctorHospital();
+				doctor.setDoctor_id(Integer.parseInt(resultSet.getString("doctor_id")));
+	    		doctor.setHospital_name(resultSet.getString("hospital_name"));	    		
+	    		list.add(doctor);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			
 			throw new RuntimeException(e);
 		}
 		return list;

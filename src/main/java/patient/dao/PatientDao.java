@@ -10,7 +10,7 @@ import java.util.List;
 
 import doctor.domain.Doctor;
 import patient.domain.Patient;
-
+import patient.domain.PatientDoctor;
 
 //import java.util.ArrayList;
 //import java.util.List;
@@ -167,6 +167,40 @@ public class PatientDao {
 				patient.setFirst_name(resultSet.getString("first_name"));
 	    		patient.setEmail(resultSet.getString("email"));
 	    		patient.setContact_no(resultSet.getString("contact_no"));
+	    		list.add(patient);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
+	public List<Object> findallD() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hospital_database", MySQL_user, MySQL_password);
+			String sql = "CREATE OR REPLACE VIEW view1 AS\n"
+					+ "	SELECT P.patient_id, P.first_name as patient_name, D.first_name as d_first_Name\n"
+					+ "	FROM hospital_database.patient P\n"
+					+ "	INNER JOIN hospital_database.doctor D ON D.doctor_id = P.doctor_id\n"
+					+ "	GROUP BY P.patient_id\n"
+					+ "	ORDER BY P.first_name ASC;\n"
+					+ "	\n"
+					+ "\n"
+					+ "	\n"
+					+ "\n";
+			PreparedStatement preparestatement = connect.prepareStatement(sql);
+			preparestatement.executeUpdate();
+			sql = "select * from view1";
+			preparestatement = connect.prepareStatement(sql);
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				PatientDoctor patient = new PatientDoctor();
+				patient.setPatient_id(Integer.parseInt(resultSet.getString("patient_id")));
+	    		patient.setFirst_name(resultSet.getString("patient_name"));
+	    		patient.setD_first_Name(resultSet.getString("d_first_Name"));
 	    		list.add(patient);
 			 }
 			connect.close();

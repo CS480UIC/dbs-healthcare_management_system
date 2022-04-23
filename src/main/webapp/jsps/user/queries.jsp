@@ -32,5 +32,9 @@
     <a href="<c:url value='/findPatients'/>" target="body">Please list all the patients</a>&nbsp;&nbsp;
    </br>
     <a href="<c:url value='/findHospitals'/>" target="body">Please list all the hospitals with more than 50 employee</a>&nbsp;&nbsp;
+          </br>
+    <a href="<c:url value='/findPatientsD'/>" target="body">Please list all the patients</a>&nbsp;&nbsp;
+    </br>
+    <a href="<c:url value='/findDoctorsH'/>" target="body">Please list all the patients</a>&nbsp;&nbsp;
   </body>
 </html>

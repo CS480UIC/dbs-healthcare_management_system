@@ -33,6 +33,10 @@ public class DoctorService {
 		return doctorDao.findall();
 		
 	}
+	public List<Object> findallH() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return doctorDao.findallH();
+		
+	}
 	
 	
 }
