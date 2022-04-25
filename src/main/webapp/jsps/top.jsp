@@ -53,6 +53,7 @@
 		    <a href="<c:url value='/jsps/patient_entity/menu.jsp'/>" target="body">Patient Entity </a> |&nbsp;&nbsp;
             <a href="<c:url value='/jsps/patient_medical_history_surgeries_entity/menu.jsp'/>" target="body">Patient Surgeries Entity </a> |&nbsp;&nbsp;
 		    <a href="<c:url value='/jsps/patient_medical_history_entity/menu.jsp'/>" target="body">Patient Medical History Entity </a> |&nbsp;&nbsp;
+		    <a href="<c:url value='/jsps/patient_doctor_entity/menu.jsp'/>" target="body">Patient Doctor Entity </a> |&nbsp;&nbsp;
 		</c:otherwise>
 	</c:choose>
 
