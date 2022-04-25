@@ -36,9 +36,14 @@
     <a href="<c:url value='/findPatientsD'/>" target="body">Please list all the patients</a>&nbsp;&nbsp;
     </br>
     <a href="<c:url value='/findDoctorsH'/>" target="body">Please list all the patients</a>&nbsp;&nbsp;
+
     
     </br>
     <a href="<c:url value='/findTotalPrice'/>" target="body">Please list all the total Price of Medicines manufactured by TCS Company</a>&nbsp;&nbsp;
     
+
+    </br>
+    <a href="<c:url value='/findInsurance'/>" target="body">Please list all the patients</a>&nbsp;&nbsp;
+
   </body>
 </html>

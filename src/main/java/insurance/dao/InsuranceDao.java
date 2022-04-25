@@ -6,14 +6,16 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-
-
+import doctor.domain.DoctorHospital;
 
 //import java.util.ArrayList;
 //import java.util.List;
 
 import insurance.domain.Insurance;
+import insurance.domain.*;
 
 /**
  * DDL functions performed in database
@@ -139,5 +141,37 @@ public class InsuranceDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	
+	public List<Object> findallP() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hospital_database", MySQL_user, MySQL_password);
+			String sql = "Create OR REPLACE view view2 as \n"
+					+ "	SELECT p.first_name, p.last_name \n"
+					+ "	FROM hospital_database.patient as p\n"
+					+ "	WHERE EXISTS (SELECT i.patient_id\n"
+					+ "	     FROM hospital_database.insurance  as i\n"
+					+ "	      WHERE p.patient_id=i.patient_id\n"
+					+ "	      AND start_date>=\"2021-03-01\")";
+			PreparedStatement preparestatement = connect.prepareStatement(sql);
+			preparestatement.executeUpdate();
+			sql = "select * from view2";
+		    preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				InsurancePatient doctor = new InsurancePatient();
+				doctor.setFirst_name(resultSet.getString("first_name"));
+				doctor.setLast_name(resultSet.getString("last_name"));    		
+	    		list.add(doctor);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			
+			throw new RuntimeException(e);
+		}
+		return list;
+		
 	}
 }
