@@ -36,9 +36,13 @@
     <a href="<c:url value='/findPatientsD'/>" target="body">Please list all the patients</a>&nbsp;&nbsp;
     </br>
     <a href="<c:url value='/findDoctorsH'/>" target="body">Please list all the patients</a>&nbsp;&nbsp;
-    
+    <br>
+    <a>Aggregate Queries</a>
     </br>
     <a href="<c:url value='/findTotalPrice'/>" target="body">Please list all the total Price of Medicines manufactured by TCS Company</a>&nbsp;&nbsp;
+    
+    </br>
+    <a href="<c:url value='/findTotalPayments'/>" target="body">Please list total number of payments after Feb 11, 2022</a>&nbsp;&nbsp;
     
   </body>
 </html>
