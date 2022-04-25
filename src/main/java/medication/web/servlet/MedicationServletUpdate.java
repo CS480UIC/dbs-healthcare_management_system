@@ -102,7 +102,7 @@ public class MedicationServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Medication Updated");
-			request.getRequestDispatcher("/jsps/medication_entity/medicine_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/medication_entity/medication_read_output.jsp").forward(request, response);
 		}
 	}
 }

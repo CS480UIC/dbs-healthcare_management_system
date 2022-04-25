@@ -32,7 +32,7 @@
 	<br/>
 	
 	
-	<input type="submit" value="Create Doctor"/>
+	<input type="submit" value="Create PatientDoctor"/>
 	
 </form>
   </body>

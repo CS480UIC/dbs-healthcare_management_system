@@ -226,7 +226,7 @@ CREATE TABLE IF NOT EXISTS `hospital_database`.`payment` (
   `first_name` VARCHAR(20) NOT NULL,
   `last_name` VARCHAR(20) NOT NULL,
   `type_of_payment` VARCHAR(20) NOT NULL,
-  `treatmet` VARCHAR(20) NOT NULL,
+  `treatment` VARCHAR(20) NOT NULL,
   `doc_referred` VARCHAR(20) NOT NULL,
   `date` DATE NOT NULL,
   `patient_id` INT NOT NULL,
@@ -305,7 +305,7 @@ DROP TABLE IF EXISTS `hospital_database`.`patient_medical_history_surgeries` ;
 
 CREATE TABLE IF NOT EXISTS `hospital_database`.`patient_medical_history_surgeries` (
   `history_id` INT NOT NULL,
-  `surgeries` INT NOT NULL,
+  `surgeries` VARCHAR(40) NOT NULL,
   PRIMARY KEY (`history_id`, `surgeries`),
   CONSTRAINT `history_surgeries_id`
     FOREIGN KEY (`history_id`)
@@ -314,7 +314,6 @@ CREATE TABLE IF NOT EXISTS `hospital_database`.`patient_medical_history_surgerie
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE UNIQUE INDEX `history_id_UNIQUE` ON `hospital_database`.`patient_medical_history_surgeries` (`history_id` ASC) VISIBLE;
 
 LOCK TABLES `patient_medical_history_surgeries` WRITE;
 /*!40000 ALTER TABLE `patient_medical_history_surgeries` DISABLE KEYS */;

@@ -25,7 +25,7 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/MedicationServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="medication_id" value="${medication.medication_id }"/>
+		<input type="hidden" name="medicine_id" value="${medication.medicine_id }"/>
 	 Medicine ID	        ：<input type="text" name="medicine_id" value="${medication.medicine_id }"/>
 	<span style="color: red; font-weight: 900">${errors.medicine_id }</span>
 	<br/>
@@ -51,7 +51,7 @@
 	Patient ID ：<input type="text" name="patient_id" value="${medication.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
-	<input type="submit" value="Delete Doctor"/>
+	<input type="submit" value="Delete Medication "/>
 </form>
 
 </body>

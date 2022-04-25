@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>Read Doctor Output</h1>
+  <h1>Read Medication Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
 	

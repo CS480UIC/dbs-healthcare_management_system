@@ -31,7 +31,7 @@
 	First Name  :<input type="text" name="first_name" value="${form.first_name }"/>
 	<span style="color: red; font-weight: 900">${errors.first_name }</span>
 	<br/>
-	Last Name   ：<input type="password" name="last_name" value="${form.last_name }"/>
+	Last Name   ：<input type="text" name="last_name" value="${form.last_name }"/>
 	<span style="color: red; font-weight: 900">${errors.last_name }</span>
 	<br/>
 	Payment Type       ：<input type="text" name="type_of_payment" value="${form.type_of_payment }"/>

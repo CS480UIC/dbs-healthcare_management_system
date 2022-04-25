@@ -79,7 +79,7 @@
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
 	
-	<input type="submit" value="Update Doctor"/>
+	<input type="submit" value="Update Medication"/>
 </form>
 
 </body>

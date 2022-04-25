@@ -593,7 +593,7 @@
     <description></description>
     <display-name>PaymentServletRead</display-name>
     <servlet-name>PaymentServletRead</servlet-name>
-    <servlet-class>Payment.web.servlet.DoctorServletRead</servlet-class>
+    <servlet-class>payment.web.servlet.PaymentServletRead</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PaymentServletRead</servlet-name>

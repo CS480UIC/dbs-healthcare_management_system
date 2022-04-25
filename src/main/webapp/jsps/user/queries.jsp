@@ -26,16 +26,18 @@
     <br>
     
     <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>&nbsp;&nbsp;
+    <br><a>Simple</a>
       </br>
-    <a href="<c:url value='/findDoctors'/>" target="body">Please list all the doctors</a>&nbsp;&nbsp;
+    <a href="<c:url value='/findDoctors'/>" target="body">Please list all the doctors who works in dental department</a>&nbsp;&nbsp;
       </br>
     <a href="<c:url value='/findPatients'/>" target="body">Please list all the patients</a>&nbsp;&nbsp;
    </br>
     <a href="<c:url value='/findHospitals'/>" target="body">Please list all the hospitals with more than 50 employee</a>&nbsp;&nbsp;
+    <br><a>Complex</a>
           </br>
-    <a href="<c:url value='/findPatientsD'/>" target="body">Please list all the patients</a>&nbsp;&nbsp;
+    <a href="<c:url value='/findPatientsD'/>" target="body">Please list all the patients with there corresponding doctor name </a>&nbsp;&nbsp;
     </br>
-    <a href="<c:url value='/findDoctorsH'/>" target="body">Please list all the patients</a>&nbsp;&nbsp;
+    <a href="<c:url value='/findDoctorsH'/>" target="body">Please list all the doctor_ids and their hospital name </a>&nbsp;&nbsp;
     <br>
     <a>Aggregate Queries</a>
     </br>

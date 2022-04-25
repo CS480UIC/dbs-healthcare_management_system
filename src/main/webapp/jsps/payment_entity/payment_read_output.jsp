@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>Read Doctor Output</h1>
+  <h1>Read Payment Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
 	
@@ -31,7 +31,7 @@
 	First Name  :<input type="text" name="first_name" value="${payment.first_name }"/>
 	<span style="color: red; font-weight: 900">${errors.first_name }</span>
 	<br/>
-	Last Name   ：<input type="password" name="last_name" value="${payment.last_name }"/>
+	Last Name   ：<input type="text" name="last_name" value="${payment.last_name }"/>
 	<span style="color: red; font-weight: 900">${errors.last_name }</span>
 	<br/>
 	Payment Type       ：<input type="text" name="type_of_payment" value="${payment.type_of_payment }"/>
