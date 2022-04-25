@@ -432,6 +432,52 @@
   </servlet-mapping>
   
   
+  
+  <servlet>
+    <description></description>
+    <display-name>PatientDoctorServletCreate</display-name>
+    <servlet-name>PatientDoctorServletCreate</servlet-name>
+    <servlet-class>patient_doctor.web.servlet.PatientDoctorServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientDoctorServletCreate</servlet-name>
+    <url-pattern>/PatientDoctorServletCreate</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PatientDoctorServletRead</display-name>
+    <servlet-name>PatientDoctorServletRead</servlet-name>
+    <servlet-class>patient_doctor.web.servlet.PatientDoctorServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientDoctorServletRead</servlet-name>
+    <url-pattern>/PatientDoctorServletRead</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>PatientDoctorServletDelete</display-name>
+    <servlet-name>PatientDoctorServletDelete</servlet-name>
+    <servlet-class>patient_doctor.web.servlet.PatientDoctorServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientDoctorServletDelete</servlet-name>
+    <url-pattern>/PatientDoctorServletDelete</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PatientDoctorServletUpdate</display-name>
+    <servlet-name>PatientDoctorServletUpdate</servlet-name>
+    <servlet-class>patient_doctor.web.servlet.PatientDoctorServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientDoctorServletUpdate</servlet-name>
+    <url-pattern>/PatientDoctorServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
   <servlet>
     <description></description>
     <display-name>PatientMedicalHistorySurgeriesServletCreate</display-name>
