@@ -285,6 +285,16 @@
     <servlet-name>HospitalServletUpdate</servlet-name>
     <url-pattern>/HospitalServletUpdate</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>findTotalCount</display-name>
+    <servlet-name>findTotalCount</servlet-name>
+    <servlet-class>hospital.web.servlet.findTotalCount</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findTotalCount</servlet-name>
+    <url-pattern>/findTotalCount</url-pattern>
+  </servlet-mapping>
   
   
   
@@ -609,6 +619,18 @@
     <servlet-name>PaymentServletUpdate</servlet-name>
     <url-pattern>/PaymentServletUpdate</url-pattern>
   </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>findTotalPayments</display-name>
+    <servlet-name>findTotalPayments</servlet-name>
+    <servlet-class>payment.web.servlet.findTotalPayments</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findTotalPayments</servlet-name>
+    <url-pattern>/findTotalPayments</url-pattern>
+  </servlet-mapping>
+  
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>

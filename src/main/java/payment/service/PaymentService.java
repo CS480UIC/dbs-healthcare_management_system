@@ -1,6 +1,8 @@
 package payment.service;
 
 
+import java.util.List;
+
 import payment.dao.PaymentDao;
 import payment.domain.Payment;
 
@@ -25,6 +27,11 @@ public class PaymentService {
 		Payment payment = paymentDao.findByPID(form.getPayment_id());
 		if(payment.getPayment_id() != null && payment.getPayment_id()==form.getPayment_id()) throw new PaymentException("This payment name has been registered!");
 		paymentDao.add(form);
+	}
+	
+	public List<Object> findTotalPayments() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return paymentDao.findTotalPayments();
+		
 	}
 	
 	

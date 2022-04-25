@@ -32,5 +32,9 @@ public class HospitalService {
 		return hospitalDao.findall();
 		
 	}
+	public List<Object> findTotalCount() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return hospitalDao.findTotalCount();
+		
+	}
 	
 }

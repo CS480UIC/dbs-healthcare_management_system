@@ -6,9 +6,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.util.ArrayList;
 //import java.util.List;
@@ -144,5 +143,26 @@ public class PaymentDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	
+	public  List<Object> findTotalPayments() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			
+			
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hospital_database", MySQL_user, MySQL_password);
+			String sql = "select COUNT(payment_id) as TOTAL_FUNDS_COLLECTED from PAYMENT  where date > \"2022-02-11\"";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+			
+	    		list.add(resultSet.getString("TOTAL_FUNDS_COLLECTED"));
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
 	}
 }

@@ -44,5 +44,8 @@
     </br>
     <a href="<c:url value='/findTotalPayments'/>" target="body">Please list total number of payments after Feb 11, 2022</a>&nbsp;&nbsp;
     
+    </br>
+    <a href="<c:url value='/findTotalCount'/>" target="body">Please list count of Hospital names whose employee count is less than 100</a>&nbsp;&nbsp;
+    
   </body>
 </html>

@@ -166,4 +166,27 @@ public class HospitalDao {
 	
 		
 	}
+	
+	public List<Object> findTotalCount() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hospital_database", MySQL_user, MySQL_password);
+			String sql = "select name,COUNT(employee_count) as Count from hospital  GROUP BY name HAVING SUM(employee_count) < 100";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Hospital hospital = new Hospital();
+				hospital.setName(resultSet.getString("name"));
+	    	
+	    		list.add(resultSet.getString("name"));
+	    		list.add(resultSet.getString("Count"));
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+	}
 }

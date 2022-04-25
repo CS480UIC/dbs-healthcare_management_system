@@ -8,16 +8,18 @@
 
 </head>
 <body>
-	<h3 align="center"> Medication Table </h3>
+	<h3 align="center"> Hospital Table </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
-		<th>Total Price</th>
+		<th>Name</th>
+		<th>Count</th>
 		
 	</tr>
-<c:forEach items="${TotalPrice}" var="price">
+<c:forEach items="${TotalCount}" var="hospital">
 	<tr>
+		<td>${hospital}</td>
 		
-		<td>${price}</td>
+		
 	</tr>
 </c:forEach>
 </table>

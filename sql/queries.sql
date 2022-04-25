@@ -49,11 +49,11 @@
 
 	
 
-	SELECT COUNT(employee_count) as count
+	SELECT name, COUNT(employee_count) as Count
 	FROM hospital 
 	GROUP BY 
     name 
-	HAVING SUM(employee_count) < 25 ;
+	HAVING SUM(employee_count) < 100 ;
 	
 
 	
