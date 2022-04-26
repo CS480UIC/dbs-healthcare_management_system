@@ -285,7 +285,7 @@ CREATE TABLE IF NOT EXISTS `hospital_database`.`patient_medical_history_medicati
   `history_id` INT NOT NULL,
   `medication` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`history_id`, `medication`),
-  CONSTRAINT `hiatory_id`
+  CONSTRAINT `history_id`
     FOREIGN KEY (`history_id`)
     REFERENCES `hospital_database`.`patient_medical_history` (`history_id`)
     ON DELETE CASCADE
@@ -363,6 +363,16 @@ LOCK TABLES `entity1` WRITE;
 INSERT INTO `entity1` VALUES ('User1','Password1','email1@gmail.com'),('User2','Password2','email2@gmail.com'),('User3','Password3','email3@gmail.com'),('User4','Password4','email4@gmail.com'),('User5','Password5','email5@gmail.com');
 /*!40000 ALTER TABLE `entity1` ENABLE KEYS */;
 UNLOCK TABLES;
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `user` (
+  `username` varchar(20) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

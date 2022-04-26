@@ -73,6 +73,17 @@
   
   <servlet>
     <description></description>
+    <display-name>DeleteDB</display-name>
+    <servlet-name>DeleteDB</servlet-name>
+    <servlet-class>init.web.servlet.DeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteDB</servlet-name>
+    <url-pattern>/DeleteDB</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
     <display-name>UserServletLogin</display-name>
     <servlet-name>UserServletLogin</servlet-name>
     <servlet-class>user.web.servlet.UserServletLogin</servlet-class>

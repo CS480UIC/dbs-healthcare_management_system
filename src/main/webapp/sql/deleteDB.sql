@@ -8,11 +8,13 @@ DROP TABLE IF EXISTS `hospital_database`.`medication` ;
 
 DROP TABLE IF EXISTS `hospital_database`.`payment` ;
 
-DROP TABLE IF EXISTS `hospital_database`.`patient_medical_history` ;
+
 
 DROP TABLE IF EXISTS `hospital_database`.`patient_medical_history_medication` ;
 
 DROP TABLE IF EXISTS `hospital_database`.`patient_medical_history_surgeries` ;
+
+DROP TABLE IF EXISTS `hospital_database`.`patient_medical_history` ;
 DROP TABLE IF EXISTS `hospital_database`.`patient` ;
 
 DROP TABLE IF EXISTS `hospital_database`.`doctor` ;
