@@ -1,6 +1,8 @@
 package insurance.service;
 
 
+import java.util.List;
+
 import insurance.dao.InsuranceDao;
 import insurance.domain.Insurance;
 
@@ -26,6 +28,9 @@ public class InsuranceService {
 		if(insurance.getInsurance_id() != null && insurance.getInsurance_id()==form.getInsurance_id()) throw new InsuranceException("This insurance name has been registered!");
 		insuranceDao.add(form);
 	}
-	
+	public List<Object> findallP() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return insuranceDao.findallP();
+
+	}
 	
 }
