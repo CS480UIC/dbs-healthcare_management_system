@@ -17,7 +17,8 @@
 	</tr>
 <c:forEach items="${TotalCount}" var="hospital">
 	<tr>
-		<td>${hospital}</td>
+		<td>${hospital.name}</td>
+		<td>${hospital.count}</td>
 		
 		
 	</tr>

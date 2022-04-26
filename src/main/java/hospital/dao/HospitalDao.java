@@ -14,6 +14,7 @@ import doctor.domain.Doctor;
 //import java.util.List;
 
 import hospital.domain.Hospital;
+import hospital.domain.HospitalCount;
 import patient.domain.Patient;
 
 /**
@@ -173,15 +174,16 @@ public class HospitalDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hospital_database", MySQL_user, MySQL_password);
-			String sql = "select name,COUNT(employee_count) as Count from hospital  GROUP BY name HAVING SUM(employee_count) < 100";
+			String sql = "select name,SUM(employee_count) as Count from hospital  GROUP BY name HAVING SUM(employee_count) < 100";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
-				Hospital hospital = new Hospital();
+				HospitalCount hospital = new HospitalCount();
 				hospital.setName(resultSet.getString("name"));
-	    	
-	    		list.add(resultSet.getString("name"));
-	    		list.add(resultSet.getString("Count"));
+	    	    hospital.setCount(Integer.parseInt(resultSet.getString("Count")));
+	    		
+	    		
+	    		list.add(hospital);
 			 }
 			connect.close();
 		} catch(SQLException e) {
